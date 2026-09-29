@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Portfolio Growth · Hong Kong</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F4F6;--ink:#111827;--muted:#6B7280;--line:#E5E7EB;--accent:#16A34A;--shadow:0 2px 6px rgba(0,0,0,.04),0 14px 34px rgba(15,23,42,.08)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:'IBM Plex Sans',sans-serif;color:var(--ink);font-size:14px;line-height:1.5}
+.wrap{max-width:1320px;margin:auto;padding:20px 24px 42px}
+.report-hero{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;margin:0 0 18px;padding:24px 28px;background:linear-gradient(135deg,#111827 0%,#5B1732 58%,#D81B45 100%);border-radius:18px;box-shadow:0 16px 42px rgba(17,24,39,.16);color:#fff}
+.kicker{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-bottom:8px}
+h1{font-size:clamp(30px,4vw,52px);line-height:1;margin:0 0 8px;letter-spacing:-.045em}
+.sub{margin:0;color:#DCFCE7;font-family:'IBM Plex Mono',monospace;font-size:12px}.badge{display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.13);border-radius:999px;padding:8px 12px;font-family:'IBM Plex Mono',monospace;font-size:11px;white-space:nowrap}
+.panel{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+.panel-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-end;padding:16px 18px;border-bottom:1px solid var(--line);background:#F9FAFB}
+.panel-head h2{margin:0;font-size:19px;letter-spacing:-.02em}.panel-head p{margin:4px 0 0;color:var(--muted);font-size:12px}
+.legend{display:flex;gap:8px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#4B5563}.legend span{border:1px solid #E5E7EB;border-radius:999px;padding:5px 8px;background:#fff}
+.table-wrap{overflow:auto}table{width:100%;min-width:850px;border-collapse:collapse}th{background:#F9FAFB;color:#4B5563;font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);white-space:nowrap}td{padding:13px 14px;border-bottom:1px solid #EEF2F7;vertical-align:middle}tbody tr:last-child td{border-bottom:0}tbody tr:hover{background:#F9FAFB}
+th:nth-child(n+3),td:nth-child(n+3){text-align:right}.agency-cell{display:flex;align-items:center;gap:10px;font-weight:800}.dot{width:8px;height:28px;border-radius:999px;border:1px solid rgba(0,0,0,.12);display:inline-block;flex:0 0 auto}.group{display:block;color:var(--muted);font-family:'IBM Plex Mono';font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;margin-top:2px}.rank{font-family:'IBM Plex Mono';font-weight:700;color:#4B5563}.num{font-family:'IBM Plex Mono';font-weight:800}.growth{font-weight:900;font-size:18px}.growth.pos{color:#15803D}.growth.neg{color:#B91C1C}.points{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:26px;padding:0 10px;border-radius:999px;font-family:'IBM Plex Mono';font-size:12px;font-weight:800}.points.pt2{background:#DCFCE7;color:#166534}.points.pt1{background:#DBEAFE;color:#1E3A8A}.points.pt0{background:#F3F4F6;color:#4B5563}.points.ptm1{background:#FEE2E2;color:#991B1B}.you-row{background:#FFF7FA;box-shadow:inset 5px 0 0 #D81B45}
+.note{padding:14px 18px;border-top:1px solid var(--line);color:#6B7280;font-size:12px;background:#FCFCFD}
+@media(max-width:760px){.wrap{padding:14px}.report-hero,.panel-head{display:block}.badge{margin-top:14px}}
+</style>
+<style id="vitality-green-theme">:root{--accent:#16A34A}.hero,.report-hero{background:linear-gradient(135deg,#0F2A1C 0%,#166534 62%,#16A34A 100%)!important}.sub,.report-sub{color:#DCFCE7!important}tbody tr.active{background:#F0FDF4!important}</style>
+</head>
+<body>
+<main class="wrap">
+  <section class="report-hero">
+    <div>
+      <div class="kicker">RECMA · Hong Kong · Qualitative Evaluation</div>
+      <h1>Client Portfolio Growth</h1>
+      <p class="sub">T5 · Client portfolio value growth at February 2026</p>
+    </div>
+    <div class="badge">14 agencies · $2,524m portfolio value</div>
+  </section>
+  <section class="panel">
+    <div class="panel-head">
+      <div>
+        <h2>Agency ranking</h2>
+        <p>By decreasing order of CPV growth. Transfers are not taken into account.</p>
+      </div>
+      <div class="legend">
+        <span>Growth = (Portfolio 2025 - OAV 2024) / OAV 2024</span>
+        <span>Values in USD m</span>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:70px">Rank</th>
+            <th>Agency</th>
+            <th>CPV Growth</th>
+            <th>Client Portfolio<br>Dec. 2025</th>
+            <th>Newbiz Balance<br>Jan.-Dec. 2025</th>
+            <th>OAV 2024</th>
+            <th>RECMA Points</th>
+          </tr>
+        </thead>
+        <tbody id="portfolioRows"></tbody>
+      </table>
+    </div>
+    <div class="note">
+      <strong>Methodological note:</strong> It includes major wins announced mid and end 2024 which were not fully accounted in the released OAV 2024, plus all moves 2025 with full ad spends. Therefore, it does not reflect organic growth/decrease but rather a trend.
+      <br><br>Organic growth from existing clients means these figures cannot be compared directly to Buying billings 2024.
+    </div>
+  </section>
+</main>
+<script>
+const PORTFOLIO_DATA=[
+  {rank:'1',agency:'Spark Foundry',group:'Publicis Media',color:'#FFEADD',growth:148,portfolio:74,newbiz:42,oav:30,points:2},
+  {rank:'2',agency:'Hearts & Science',group:'Omnicom Media',color:'#FFE699',growth:100,portfolio:19,newbiz:19,oav:0,points:2},
+  {rank:'3',agency:'dentsu X',group:'dentsu',color:'#E2F0D9',growth:16,portfolio:206,newbiz:27,oav:178,points:1},
+  {rank:'4',agency:'Starcom',group:'Publicis Media',color:'#FFEADD',growth:16,portfolio:311,newbiz:20,oav:269,points:1},
+  {rank:'5',agency:'EssenceMediacom',group:'WPP Media',color:'#FFE4FF',growth:14,portfolio:201,newbiz:4,oav:177,points:0},
+  {rank:'6=',agency:'UM incl. Initiative',group:'Omnicom Media',color:'#FFE699',growth:8,portfolio:86,newbiz:13,oav:79,points:1},
+  {rank:'6=',agency:'PHD',group:'Omnicom Media',color:'#FFE699',growth:8,portfolio:303,newbiz:17,oav:281,points:1},
+  {rank:'8',agency:'OMD',group:'Omnicom Media',color:'#FFE699',growth:6,portfolio:361,newbiz:6,oav:342,points:1},
+  {rank:'9',agency:'Havas Media',group:'Havas Media Network',color:'#DCB9FF',growth:4,portfolio:154,newbiz:0,oav:149,points:0,you:true},
+  {rank:'10',agency:'iProspect',group:'dentsu',color:'#E2F0D9',growth:0,portfolio:71,newbiz:2,oav:71,points:0},
+  {rank:'11',agency:'Zenith',group:'Publicis Media',color:'#FFEADD',growth:-2,portfolio:270,newbiz:15,oav:277,points:-1},
+  {rank:'12',agency:'Carat',group:'dentsu',color:'#E2F0D9',growth:-4,portfolio:220,newbiz:-8,oav:228,points:-1},
+  {rank:'13',agency:'Mindshare',group:'WPP Media',color:'#FFE4FF',growth:-12,portfolio:142,newbiz:-11,oav:162,points:-1},
+  {rank:'14',agency:'Wavemaker',group:'WPP Media',color:'#FFE4FF',growth:-35,portfolio:104,newbiz:-43,oav:160,points:-1}
+];
+function pointClass(points){
+  if(points>=2)return 'pt2';
+  if(points===1)return 'pt1';
+  if(points===0)return 'pt0';
+  return 'ptm1';
+}
+function pointLabel(points){
+  return (points>0?'+':'')+points+' pt'+(Math.abs(points)===1?'':'s');
+}
+function fmt(value){
+  return Number(value).toLocaleString('en-US');
+}
+document.getElementById('portfolioRows').innerHTML=PORTFOLIO_DATA.map(row=>`
+<tr class="${row.you?'you-row':''}">
+  <td><span class="rank">${row.rank}</span></td>
+  <td><span class="agency-cell"><span class="dot" style="background:${row.color}"></span><span>${row.agency}<span class="group">${row.group}</span></span></span></td>
+  <td><span class="growth ${row.growth<0?'neg':'pos'}">${row.growth}%</span></td>
+  <td><span class="num">$${fmt(row.portfolio)}m</span></td>
+  <td><span class="num">${row.newbiz>0?'+':''}$${fmt(row.newbiz)}m</span></td>
+  <td><span class="num">$${fmt(row.oav)}m</span></td>
+  <td><span class="points ${pointClass(row.points)}">${pointLabel(row.points)}</span></td>
+</tr>`).join('');
+</script>
+</body>
+</html>

@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RECMA · T21 New Business Balance · Hong Kong March 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800;900&amp;family=IBM+Plex+Mono:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script>
+(function(){
+  var inPortal = location.search.indexOf('portal=1') !== -1;
+  var inFrame  = (function(){ try{ return window !== window.top; }catch(e){ return true; } })();
+  if(inPortal || inFrame){
+    var s = document.createElement('style');
+    s.textContent = '.topbar{display:none!important}.hero{display:none!important}.wrap{padding-top:12px!important;padding-bottom:16px!important}body{background:#F3F4F6!important}';
+    document.head.appendChild(s);
+  }
+})();
+</script>
+<style>
+:root{
+  --bg:#F3F4F6;--card:#fff;--ink:#0F172A;--muted:#64748B;--line:#D9E1EA;
+  --navy:#101827;--accent:#D81B45;--green:#07864F;--red:#D81B45;--blue:#2F5F95;
+  --shadow:0 1px 2px rgba(15,23,42,.04),0 16px 36px rgba(15,23,42,.08);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);font-family:'IBM Plex Sans',system-ui,sans-serif;color:var(--ink);font-size:14px;line-height:1.45}
+.topbar{position:sticky;top:0;z-index:20;background:linear-gradient(135deg,#0B1220,#141E31);color:white;border-bottom:1px solid rgba(255,255,255,.1)}
+.topbar-inner{height:72px;display:grid;grid-template-columns:300px 1fr auto;align-items:stretch}
+.brand{display:flex;align-items:center;gap:14px;padding:0 22px;border-right:1px solid rgba(255,255,255,.12)}
+.logo{width:40px;height:40px;border:1px solid rgba(255,255,255,.28);border-radius:10px;display:grid;place-items:center;font-size:22px;font-weight:900}
+.brand strong{display:block;font-size:18px;line-height:1}.brand span{display:block;margin-top:4px;font-size:11px;color:rgba(255,255,255,.7)}
+.nav{display:flex;overflow-x:auto}.nav a{min-width:150px;display:grid;place-items:center;padding:0 18px;border-right:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.82);text-decoration:none;font-family:'IBM Plex Mono';font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.04em}.nav a:hover{background:linear-gradient(135deg,rgba(216,27,69,.32),rgba(139,58,82,.42));color:#fff}
+.actions{display:flex}.actions button{min-width:94px;background:transparent;color:white;border:0;border-left:1px solid rgba(255,255,255,.12);font-family:'IBM Plex Mono';font-size:11px;cursor:pointer}.actions button:hover{background:rgba(255,255,255,.08)}
+.wrap{max-width:1500px;margin:auto;padding:28px 28px 70px}.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;margin-bottom:28px}.hero-card{background:linear-gradient(135deg,#2B142D,#8B3A52 58%,#D81B45);color:white;border-radius:18px;padding:30px 34px;box-shadow:var(--shadow)}.eyebrow{font-family:'IBM Plex Mono';font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.68}.hero h1{font-size:52px;line-height:.98;margin:12px 0 12px;letter-spacing:-.045em}.hero p{margin:0;color:rgba(255,255,255,.78);max-width:850px}.kpis{display:grid;grid-template-columns:1fr 1fr;gap:12px}.kpi{background:white;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow)}.kpi small{font-family:'IBM Plex Mono';font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}.kpi b{display:block;font-size:32px;letter-spacing:-.04em;margin-top:8px}
+.section{margin:34px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:12px}.section-head h2{font-size:26px;line-height:1;margin:0;letter-spacing:-.025em}.section-head p{margin:6px 0 0;color:var(--muted);font-size:12px}.section-num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:999px;background:#FDECEF;color:var(--accent);font-family:'IBM Plex Mono';font-size:11px;margin-right:8px}
+.card{background:white;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}.table-wrap{overflow:auto;max-height:620px}table{width:100%;border-collapse:collapse}th{position:sticky;top:0;z-index:2;background:#F8FAFC;color:#475569;border-bottom:1px solid var(--line);font-family:'IBM Plex Mono';font-size:10px;text-transform:uppercase;letter-spacing:.06em;text-align:left;padding:11px 12px;white-space:nowrap}td{border-bottom:1px solid #E9EEF5;padding:10px 12px;vertical-align:top}tr:hover{background:#F8FAFC}.strong{font-weight:800}.num,.amount{font-family:'IBM Plex Mono';font-weight:800;text-align:right;white-space:nowrap}.pos{color:var(--green)!important}.neg{color:var(--red)!important}.rank{display:inline-grid;place-items:center;min-width:24px;height:24px;border-radius:999px;background:#EEF2F7;color:#64748B;font-family:'IBM Plex Mono';font-size:11px;font-weight:800;padding:0 6px}
+.group-dot{display:inline-block;width:12px;height:12px;min-width:12px;border-radius:999px;border:1px solid rgba(0,0,0,.15)}.agency-label{display:flex;align-items:center;gap:9px}.agency-label b{display:block;color:#111827}.agency-label small{display:block;color:#64748B;font-family:'IBM Plex Mono';font-size:9px;text-transform:uppercase;letter-spacing:.06em}.pill{display:inline-flex;align-items:center;justify-content:center;height:22px;border-radius:999px;padding:0 9px;font-family:'IBM Plex Mono';font-size:10px;font-weight:800;white-space:nowrap}.pill.win{background:#DAF4DF;color:#16703C}.pill.dep{background:#FDECEF;color:#D81B45}.pill.ret{background:#EAF2FF;color:#2F5F95}.pill.transfer{background:#FFF2CC;color:#7A5700}
+.takeaways{display:grid;grid-template-columns:1fr 1fr;gap:14px}.takeaway{background:white;border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow)}.takeaway b{color:#111827}.takeaway p{margin:6px 0 0;color:#475569}
+.subsection{margin-top:22px}.subsection h3{font-size:19px;margin:0 0 10px;letter-spacing:-.02em}.select-row{cursor:pointer}.select-row.active{background:#FDECEF!important;box-shadow:inset 5px 0 0 var(--accent)}.details-zone{display:grid;grid-template-columns:repeat(auto-fit,minmax(520px,1fr));gap:16px;margin-top:14px}.detail-card{display:none;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}.detail-card.active{display:block}.detail-card-head{padding:16px 18px;border-bottom:1px solid var(--line);background:#fff}.detail-card-head .agency-label b{font-size:20px}
+.detail-columns{display:grid;grid-template-columns:1fr;gap:0}.detail-columns section{padding:14px;border-bottom:1px solid var(--line)}.detail-columns section:last-child{border-bottom:0}.detail-columns h4{margin:0 0 10px}.detail-table th{position:static}.detail-table th,.detail-table td{font-size:12px;padding:8px 7px}.advertiser-cell{min-width:190px}.empty-detail{color:#94A3B8;font-style:italic;padding:12px 0}
+@media(min-width:1250px){.detail-columns{grid-template-columns:1fr 1fr}.detail-columns section{border-right:1px solid var(--line)}.detail-columns section:nth-child(2){border-right:0}.detail-columns section:nth-child(3){grid-column:1/-1;border-right:0}}
+.footer{display:flex;justify-content:space-between;color:#64748B;font-size:11px;margin-top:36px;border-top:1px solid var(--line);padding-top:16px}
+@media(max-width:1000px){.topbar-inner{grid-template-columns:1fr}.nav,.actions{display:none}.hero{grid-template-columns:1fr}.takeaways{grid-template-columns:1fr}.wrap{padding:18px 14px}.details-zone{grid-template-columns:1fr}}
+@media print{.topbar,.actions{display:none}.wrap{max-width:none;padding:10mm}.hero{display:block}.kpis{grid-template-columns:repeat(4,1fr);margin-top:12px}.section{break-inside:avoid}.card,.detail-card{box-shadow:none}.detail-card{display:block!important;break-inside:avoid}@page{size:A4 landscape;margin:10mm}}
+
+/* ─────────────────────────────────────────────
+   Agencies overview v2 — retention column + responsive alignment
+   ───────────────────────────────────────────── */
+.card{
+  max-width:100%;
+}
+
+.table-wrap{
+  width:100%;
+  overflow:auto;
+  -webkit-overflow-scrolling:touch;
+}
+
+#agencies table{
+  min-width:980px;
+}
+
+#agencies th,
+#agencies td{
+  vertical-align:middle;
+}
+
+#agencies th:nth-child(3),
+#agencies th:nth-child(4),
+#agencies th:nth-child(5),
+#agencies th:nth-child(6),
+#agencies td:nth-child(3),
+#agencies td:nth-child(4),
+#agencies td:nth-child(5),
+#agencies td:nth-child(6){
+  text-align:right!important;
+  font-variant-numeric:tabular-nums;
+}
+
+#agencies th:last-child,
+#agencies td:last-child{
+  text-align:left!important;
+}
+
+#agencies .agency-label{
+  min-width:230px;
+}
+
+.num,
+.amount{
+  text-align:right!important;
+  font-variant-numeric:tabular-nums;
+  min-width:72px;
+}
+
+.detail-table{
+  table-layout:fixed;
+  width:100%;
+}
+
+.detail-table th:nth-child(1),
+.detail-table td:nth-child(1){
+  width:34%;
+}
+
+.detail-table th:nth-child(2),
+.detail-table td:nth-child(2){
+  width:88px;
+  text-align:right!important;
+  font-variant-numeric:tabular-nums;
+}
+
+.detail-table th:nth-child(3),
+.detail-table td:nth-child(3){
+  width:24%;
+}
+
+.detail-table th:nth-child(4),
+.detail-table td:nth-child(4){
+  width:80px;
+}
+
+.detail-table th:nth-child(5),
+.detail-table td:nth-child(5){
+  width:78px;
+}
+
+.advertiser-cell{
+  white-space:normal;
+  line-height:1.25;
+}
+
+#moves table{
+  min-width:980px;
+}
+
+#moves th:nth-child(4),
+#moves td:nth-child(4){
+  text-align:right!important;
+  font-variant-numeric:tabular-nums;
+}
+
+.select-row.active{
+  background:#FDECEF!important;
+}
+
+.select-row.active td{
+  border-bottom-color:#F8D9E2!important;
+}
+
+@media(max-width:900px){
+  .wrap{
+    padding-left:14px;
+    padding-right:14px;
+  }
+  .hero h1{
+    font-size:38px;
+  }
+  #agencies table,
+  #moves table{
+    min-width:900px;
+  }
+  .details-zone{
+    grid-template-columns:1fr!important;
+  }
+  .detail-table{
+    min-width:760px;
+  }
+  .detail-card{
+    overflow:auto;
+  }
+}
+
+
+.sortable th{
+  user-select:none;
+  position:sticky;
+}
+
+.sortable th::after{
+  content:'↕';
+  opacity:.28;
+  margin-left:6px;
+  font-size:10px;
+}
+
+.sortable th[data-asc="true"]::after{
+  content:'↑';
+  opacity:.8;
+}
+
+.sortable th[data-asc="false"]::after{
+  content:'↓';
+  opacity:.8;
+}
+
+
+/* ─────────────────────────────────────────────
+   Final UX polish
+   - Retention table removed
+   - Sort affordance clearer
+   - Spend/money columns centered
+   ───────────────────────────────────────────── */
+.sortable th{
+  cursor:pointer!important;
+  padding-right:26px!important;
+  position:sticky!important;
+}
+
+.sortable th::after{
+  content:'⇅';
+  opacity:.65!important;
+  margin-left:8px!important;
+  font-size:12px!important;
+  color:#D81B45!important;
+  font-weight:900!important;
+}
+
+.sortable th:hover{
+  background:#EEF2F7!important;
+  color:#111827!important;
+}
+
+.sortable th:hover::after{
+  opacity:1!important;
+}
+
+.sortable th[data-asc="true"]::after{
+  content:'↑';
+  opacity:1!important;
+}
+
+.sortable th[data-asc="false"]::after{
+  content:'↓';
+  opacity:1!important;
+}
+
+/* Center all spend / numeric amount columns */
+.num,
+.amount,
+#agencies td:nth-child(3),
+#agencies td:nth-child(4),
+#agencies td:nth-child(5),
+#agencies td:nth-child(6),
+#agencies th:nth-child(3),
+#agencies th:nth-child(4),
+#agencies th:nth-child(5),
+#agencies th:nth-child(6),
+#moves td:nth-child(4),
+#moves th:nth-child(4),
+.detail-table td:nth-child(2),
+.detail-table th:nth-child(2){
+  text-align:center!important;
+  font-variant-numeric:tabular-nums;
+}
+
+/* Keep the last Nbr wins/departures column readable */
+#agencies td:last-child,
+#agencies th:last-child{
+  text-align:center!important;
+}
+
+/* Slightly stronger table header to indicate interactivity */
+th{
+  box-shadow:inset 0 -1px 0 #D9E1EA;
+}
+
+
+/* ════════════════════════════════════
+   RECMA PORTAL MODERNIZATION OVERRIDE
+   T21 · New Business Balance · Hong Kong
+════════════════════════════════════ */
+:root{
+  --bg:#F3F4F6;
+  --card:#FFFFFF;
+  --ink:#111827;
+  --muted:#6B7280;
+  --line:#E5E7EB;
+  --accent:#D81B45;
+  --accent-soft:#FDECEF;
+  --green:#147A4D;
+  --red:#B42318;
+  --blue:#2F5F95;
+  --shadow:0 2px 6px rgba(0,0,0,.04),0 14px 34px rgba(15,23,42,.08);
+  --grp-dentsu-bg:#E2F0D9;
+  --grp-havas-bg:#DCB9FF;
+  --grp-publicis-bg:#FFEADD;
+  --grp-omnicom-bg:#FFE699;
+  --grp-wpp-bg:#FFE4FF;
+}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'IBM Plex Sans',system-ui,sans-serif;
+}
+.wrap{
+  max-width:1260px;
+  padding:24px 24px 56px;
+}
+.hero{
+  grid-template-columns:1fr;
+  gap:14px;
+  margin-bottom:24px;
+}
+.hero-card{
+  background:linear-gradient(135deg,#111827 0%,#5B1732 58%,#D81B45 100%);
+  border-radius:22px;
+  padding:24px 28px;
+  box-shadow:0 22px 60px rgba(17,24,39,.22);
+}
+.hero-main{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:24px;
+}
+.hero h1{
+  font-size:clamp(30px,4vw,46px);
+  line-height:1;
+  margin:8px 0 8px;
+  letter-spacing:-.05em;
+}
+.hero p{
+  font-size:14px;
+  max-width:780px;
+}
+.eyebrow{
+  color:rgba(255,255,255,.72);
+}
+.hero-actions{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  flex-shrink:0;
+}
+.hero-actions button{
+  border:1px solid rgba(255,255,255,.24);
+  background:#fff;
+  color:#111827;
+  border-radius:999px;
+  padding:8px 13px;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  cursor:pointer;
+}
+.hero-actions button:hover{
+  background:#FDF2F6;
+  border-color:#F9A8D4;
+}
+.kpis{
+  grid-template-columns:repeat(4,1fr);
+}
+.kpi{
+  border:1px solid var(--line);
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  padding:16px 18px;
+}
+.kpi b{
+  font-size:28px;
+}
+.section{
+  margin:28px 0;
+}
+.section-head h2{
+  font-size:24px;
+  letter-spacing:-.025em;
+}
+.section-num{
+  background:var(--accent-soft);
+  color:var(--accent);
+}
+.card,.takeaway,.detail-card{
+  border:1px solid var(--line);
+  border-radius:16px;
+  box-shadow:var(--shadow);
+}
+.takeaways{
+  grid-template-columns:repeat(4,1fr);
+}
+.takeaway{
+  padding:16px;
+}
+.table-wrap{
+  max-height:none;
+}
+table{
+  font-size:13px;
+}
+th{
+  background:#F9FAFB;
+  color:#4B5563;
+  border-bottom:1px solid var(--line);
+}
+td{
+  border-bottom:1px solid #EEF2F7;
+}
+tr:hover{
+  background:#F9FAFB;
+}
+.rank{
+  background:#F3F4F6;
+  color:#6B7280;
+}
+.group-dot{
+  width:8px;
+  height:28px;
+  min-width:8px;
+  border-radius:999px;
+}
+.agency-label{
+  gap:10px;
+}
+.agency-label b{
+  font-size:13.5px;
+}
+.agency-label small{
+  color:#6B7280;
+}
+.pill{
+  height:23px;
+  border-radius:999px;
+}
+.pill.win{
+  background:#E9F8EF;
+  color:#147A4D;
+}
+.pill.dep{
+  background:#FDECEF;
+  color:#B42318;
+}
+.pill.ret{
+  background:#EAF2FF;
+  color:#2F5F95;
+}
+.pill.transfer{
+  background:#FFF7D6;
+  color:#7A5700;
+}
+.select-row.active{
+  background:#FDECEF!important;
+  box-shadow:inset 5px 0 0 var(--accent);
+}
+.detail-card-head{
+  background:linear-gradient(180deg,#fff,#F9FAFB);
+}
+.detail-card-head .agency-label b{
+  font-size:18px;
+}
+.detail-columns section{
+  padding:14px;
+}
+.detail-table th,.detail-table td{
+  font-size:12px;
+}
+.advertiser-cell{
+  white-space:normal;
+}
+.sortable th::after{
+  color:var(--accent)!important;
+}
+.footer{
+  color:#6B7280;
+}
+@media(max-width:1000px){
+  .hero-main{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .kpis,.takeaways{
+    grid-template-columns:1fr 1fr;
+  }
+}
+@media(max-width:680px){
+  .wrap{padding:14px}
+  .hero-card{padding:20px}
+  .kpis,.takeaways{grid-template-columns:1fr}
+}
+@media print{
+  .hero-actions{display:none!important}
+  .hero-card{
+    background:#111827!important;
+    box-shadow:none!important;
+  }
+  .section{break-inside:auto}
+}
+
+
+/* ════════════════════════════════════
+   T21 NBB — simplified ranking + side detail
+════════════════════════════════════ */
+.th-note{
+  display:block;
+  margin-top:3px;
+  font-family:'IBM Plex Sans',system-ui,sans-serif;
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:0;
+  text-transform:none;
+  color:#6B7280;
+}
+#agencies .subsection{
+  display:grid;
+  grid-template-columns:minmax(360px,430px) 1fr;
+  grid-template-areas:
+    "title title"
+    "ranking details";
+  gap:16px;
+  align-items:start;
+}
+#agencies .subsection > h3{
+  grid-area:title;
+  margin-bottom:0;
+}
+#agencies .subsection > .card{
+  grid-area:ranking;
+}
+#agencies .details-zone{
+  grid-area:details;
+  margin-top:0!important;
+  display:block;
+}
+#agencies .detail-card{
+  width:100%;
+}
+#agencies table{
+  min-width:0!important;
+}
+#agencies .table-wrap{
+  overflow:visible;
+}
+#agencies .sortable th:nth-child(1),
+#agencies .sortable td:nth-child(1),
+#agencies .sortable th:nth-child(4),
+#agencies .sortable td:nth-child(4),
+#agencies .sortable th:nth-child(5),
+#agencies .sortable td:nth-child(5),
+#agencies .sortable th:nth-child(6),
+#agencies .sortable td:nth-child(6),
+#agencies .sortable th:nth-child(7),
+#agencies .sortable td:nth-child(7){
+  display:none!important;
+}
+#agencies .sortable th:nth-child(2),
+#agencies .sortable td:nth-child(2){
+  width:68%;
+}
+#agencies .sortable th:nth-child(3),
+#agencies .sortable td:nth-child(3){
+  width:32%;
+  text-align:center!important;
+}
+#agencies .sortable th:nth-child(3){
+  background:#FFF7FA!important;
+  color:#8B1D3B!important;
+  box-shadow:inset 0 -2px 0 #D81B45;
+}
+#agencies .sortable td:nth-child(3){
+  background:#FFF7FA;
+  border-left:1px solid #F8D9E2;
+  font-size:15px;
+  font-weight:900;
+}
+#agencies .select-row.active td:nth-child(3){
+  background:#FDECEF;
+}
+#agencies .agency-label{
+  min-width:0;
+}
+#agencies .agency-label b{
+  font-size:13px;
+}
+#agencies .agency-label small{
+  font-size:8.5px;
+}
+#agencies .group-dot{
+  width:7px;
+  height:24px;
+  min-width:7px;
+}
+#agencies .detail-card.active{
+  display:block!important;
+}
+#agencies .detail-card:not(.active){
+  display:none!important;
+}
+#agencies .detail-columns{
+  grid-template-columns:1fr 1fr;
+}
+#agencies .detail-columns section:nth-child(3){
+  grid-column:1/-1;
+}
+#agencies .detail-table{
+  min-width:0!important;
+}
+#agencies .detail-card-head{
+  position:sticky;
+  top:0;
+  z-index:3;
+}
+@media(max-width:1100px){
+  #agencies .subsection{
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "title"
+      "ranking"
+      "details";
+  }
+  #agencies .table-wrap{
+    overflow:auto;
+  }
+}
+@media(max-width:760px){
+  #agencies .detail-columns{
+    grid-template-columns:1fr;
+  }
+  #agencies .detail-columns section:nth-child(3){
+    grid-column:auto;
+  }
+}
+
+
+/* ════════════════════════════════════
+   T21 NBB — full table by default, compact only on selection
+════════════════════════════════════ */
+#agencies .subsection{
+  display:block!important;
+}
+#agencies .subsection > .card{
+  margin-bottom:16px;
+}
+#agencies .subsection:not(.has-selection) .details-zone{
+  display:none!important;
+}
+#agencies .subsection:not(.has-selection) .sortable th,
+#agencies .subsection:not(.has-selection) .sortable td{
+  display:table-cell!important;
+}
+#agencies .subsection:not(.has-selection) .table-wrap{
+  overflow:auto!important;
+}
+#agencies .subsection:not(.has-selection) table{
+  min-width:980px!important;
+}
+#agencies .subsection.has-selection{
+  display:grid!important;
+  grid-template-columns:minmax(360px,430px) 1fr;
+  grid-template-areas:
+    "title title"
+    "ranking details";
+  gap:16px;
+  align-items:start;
+}
+#agencies .subsection.has-selection > h3{
+  grid-area:title;
+}
+#agencies .subsection.has-selection > .card{
+  grid-area:ranking;
+  margin-bottom:0;
+}
+#agencies .subsection.has-selection .details-zone{
+  grid-area:details;
+  display:block!important;
+}
+#agencies .subsection.has-selection table{
+  min-width:0!important;
+}
+#agencies .subsection.has-selection .table-wrap{
+  overflow:visible!important;
+}
+#agencies .subsection.has-selection .sortable th:nth-child(1),
+#agencies .subsection.has-selection .sortable td:nth-child(1),
+#agencies .subsection.has-selection .sortable th:nth-child(4),
+#agencies .subsection.has-selection .sortable td:nth-child(4),
+#agencies .subsection.has-selection .sortable th:nth-child(5),
+#agencies .subsection.has-selection .sortable td:nth-child(5),
+#agencies .subsection.has-selection .sortable th:nth-child(6),
+#agencies .subsection.has-selection .sortable td:nth-child(6),
+#agencies .subsection.has-selection .sortable th:nth-child(7),
+#agencies .subsection.has-selection .sortable td:nth-child(7){
+  display:none!important;
+}
+#agencies .subsection.has-selection .sortable th:nth-child(2),
+#agencies .subsection.has-selection .sortable td:nth-child(2){
+  width:68%;
+}
+#agencies .subsection.has-selection .sortable th:nth-child(3),
+#agencies .subsection.has-selection .sortable td:nth-child(3){
+  width:32%;
+  text-align:center!important;
+}
+#agencies .subsection.has-selection .sortable th:nth-child(3){
+  background:#FFF7FA!important;
+  color:#8B1D3B!important;
+  box-shadow:inset 0 -2px 0 #D81B45;
+}
+#agencies .subsection.has-selection .sortable td:nth-child(3){
+  background:#FFF7FA;
+  border-left:1px solid #F8D9E2;
+  font-size:15px;
+  font-weight:900;
+}
+#agencies .detail-card:not(.active){
+  display:none!important;
+}
+#agencies .detail-card.active{
+  display:block!important;
+}
+.detail-columns h4{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+.section-total{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  font-weight:800;
+  color:#111827;
+  background:#F3F4F6;
+  border:1px solid #E5E7EB;
+  border-radius:999px;
+  padding:3px 9px;
+  white-space:nowrap;
+}
+@media(max-width:1100px){
+  #agencies .subsection.has-selection{
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "title"
+      "ranking"
+      "details";
+  }
+  #agencies .subsection.has-selection .table-wrap{
+    overflow:auto!important;
+  }
+}
+
+
+.kpis{
+  grid-template-columns:repeat(6,1fr)!important;
+}
+.kpi{
+  min-height:110px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.kpi small{
+  line-height:1.3;
+}
+@media(max-width:1200px){
+  .kpis{
+    grid-template-columns:repeat(3,1fr)!important;
+  }
+}
+@media(max-width:700px){
+  .kpis{
+    grid-template-columns:1fr!important;
+  }
+}
+
+
+/* ════════════════════════════════════
+   T21 — Top navigation bar
+════════════════════════════════════ */
+.top-nav{position:sticky;top:0;z-index:100;background:#111827;box-shadow:0 8px 26px rgba(15,23,42,.22);border-bottom:1px solid rgba(255,255,255,.08)}
+.top-nav-inner{max-width:1260px;margin:0 auto;display:flex;overflow-x:auto;scrollbar-width:none;align-items:stretch}
+.top-nav-inner::-webkit-scrollbar{display:none}
+.tnav-brand{font-family:'IBM Plex Mono',monospace;letter-spacing:.08em;border-right:1px solid rgba(255,255,255,.10);display:flex;align-items:center;padding:0 16px;color:#fff;font-weight:800;font-size:12px;flex-shrink:0}
+.tnav-brand span{color:#F9A8D4}
+.tnav-tab{display:flex;align-items:center;gap:5px;padding:13px 12px;color:#CBD5E1;border-bottom:3px solid transparent;font-size:11.5px;font-weight:500;white-space:nowrap;text-decoration:none;flex-shrink:0}
+.tnav-tab:hover{color:white;background:rgba(255,255,255,.06)}
+.tnav-tab.active{color:white;border-bottom-color:#D81B45;background:rgba(216,27,69,.14)}
+.tnav-num{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:800;opacity:.4;margin-right:3px}
+.section{scroll-margin-top:52px}
+#agencies .subsection.has-selection > p{display:none!important}
+#agencies .subsection.has-selection .details-zone{
+  display:flex!important;flex-direction:column;gap:14px;align-items:stretch;
+}
+</style>
+<style id="ranking-tabs-style">
+.rank-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 22px}
+.rank-tab-btn{
+background:#E5E7EB;border:1px solid #CBD5E1;padding:10px 16px;
+border-radius:999px;font-weight:700;cursor:pointer
+}
+.rank-tab-btn.active{background:#111827;color:#fff}
+.rank-panel{display:none}
+.rank-panel.active{display:block}
+
+.rank-panel{display:none!important}.rank-panel.active{display:block!important}.panel-note{margin:0 0 12px;color:#6B7280;font-size:12px;font-weight:600}.rank-tab-btn.active{background:#111827!important;color:#fff!important}
+</style>
+</head>
+<body>
+<nav class="top-nav" id="top-nav">
+<div class="top-nav-inner">
+<div class="tnav-brand">RECMA <span>·</span> HONG KONG</div>
+<a class="tnav-tab active" href="#key"><span class="tnav-num">01</span>Key Findings</a>
+<a class="tnav-tab" href="#top10"><span class="tnav-num">02</span>Top 10 Moves</a>
+<a class="tnav-tab" href="#agencies"><span class="tnav-num">03</span>Agency Rankings</a>
+<a class="tnav-tab" href="#moves"><span class="tnav-num">04</span>All Moves</a>
+</div>
+</nav>
+<main class="wrap">
+<section class="hero" id="key">
+<div class="hero-card compact-hero">
+<div class="hero-main">
+<div>
+<div class="eyebrow">RECMA · Hong Kong · March 2026</div>
+<h1>New Business Balance</h1>
+<p>New-biz balance focuses on net wins and departures. Retentions, contract renewals and intra-group transfers are displayed separately and excluded from the NBB calculation.</p>
+</div>
+<div class="hero-actions">
+<button onclick="document.documentElement.requestFullscreen?.()">Fullscreen</button>
+<button onclick="window.print()">Print / PDF</button>
+</div>
+</div>
+</div>
+<div class="kpis">
+<div class="kpi"><small>Total New Business USD</small><b class="pos">+118m</b></div>
+<div class="kpi"><small>Total Integrated Spending Wins</small><b class="pos">240m</b></div>
+<div class="kpi"><small>Total Departures Integrated Spending</small><b class="neg">-123m</b></div>
+<div class="kpi"><small>Number of Wins</small><b>74</b></div>
+<div class="kpi"><small>Number of Departures</small><b>39</b></div>
+<div class="kpi"><small>Number of Retention</small><b>16</b></div>
+</div>
+</section>
+<section class="section">
+<div class="section-head"><div><h2><span class="section-num">01</span>Key Findings</h2><p>Executive market read.</p></div></div>
+<div class="takeaways">
+<div class="takeaway"><b>Publicis Media leads the market.</b><p>Spark Foundry is the top individual winner at +$42m NBB, driven by the Nestlé + Wyeth consolidation.</p></div>
+<div class="takeaway"><b>dentsu X posts a strong ratio.</b><p>A near-clean sweep of +$27m, mainly powered by Telford, with a significant retained book including KAO and Ocean Park.</p></div>
+<div class="takeaway"><b>Omnicom consolidates across agencies.</b><p>Hearts &amp; Science, PHD, UM incl. Initiative and OMD show a combined positive position despite visible departures.</p></div>
+<div class="takeaway"><b>WPP Media faces pressure.</b><p>WPP Media shows a negative group NBB, while EssenceMediacom remains positive thanks to Webull.</p></div>
+</div>
+</section>
+<section class="section" id="top10">
+<div class="section-head"><div><h2><span class="section-num">02</span>Top 10 Moves</h2><p>Top 10 advertisers by integrated spending — wins, departures &amp; retentions.</p></div></div>
+<div class="card"><div class="table-wrap"><table class="sortable"><thead><tr><th>#</th><th>Advertiser</th><th>Sector</th><th>Integrated spendings mUSD</th><th>Winning agency</th><th>Incumbent agency</th><th>Type</th></tr></thead><tbody>
+<tr>
+<td><span class="rank">1</span></td>
+<td class="strong advertiser-cell">FrieslandCampina</td>
+<td>Food &amp; Beverages</td>
+<td class="num">47.6</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFEADD"></span><span><b>Starcom</b><small>Publicis Media</small></span></span></td>
+<td>—</td>
+<td><span class="pill ret">Retention</span></td>
+</tr>
+<tr>
+<td><span class="rank">2</span></td>
+<td class="strong advertiser-cell">NESTLE</td>
+<td>Food &amp; Beverages</td>
+<td class="num">29.1</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFEADD"></span><span><b>Spark Foundry</b><small>Publicis Media</small></span></span></td>
+<td>OMD</td>
+<td><span class="pill win">New Business</span></td>
+</tr>
+<tr>
+<td><span class="rank">3</span></td>
+<td class="strong advertiser-cell">Telford</td>
+<td>Retail</td>
+<td class="num">27.5</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#E2F0D9"></span><span><b>dentsu X</b><small>dentsu</small></span></span></td>
+<td>—</td>
+<td><span class="pill win">New Business</span></td>
+</tr>
+<tr>
+<td><span class="rank">4</span></td>
+<td class="strong advertiser-cell">KAO</td>
+<td>Personal Care</td>
+<td class="num">19</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#E2F0D9"></span><span><b>dentsu X</b><small>dentsu</small></span></span></td>
+<td>—</td>
+<td><span class="pill ret">Retention</span></td>
+</tr>
+<tr>
+<td><span class="rank">5</span></td>
+<td class="strong advertiser-cell">AS WATSON</td>
+<td>Retail</td>
+<td class="num">18</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFE699"></span><span><b>Hearts &amp; Science</b><small>Omnicom Media</small></span></span></td>
+<td>Carat</td>
+<td><span class="pill win">New Business</span></td>
+</tr>
+<tr>
+<td><span class="rank">6</span></td>
+<td class="strong advertiser-cell">OSIM</td>
+<td>Retail</td>
+<td class="num">14.2</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFE699"></span><span><b>UM incl. Initiative</b><small>Omnicom Media</small></span></span></td>
+<td>—</td>
+<td><span class="pill win">New Business</span></td>
+</tr>
+<tr>
+<td><span class="rank">7</span></td>
+<td class="strong advertiser-cell">ASAHI</td>
+<td>Food &amp; Beverages</td>
+<td class="num">13.5</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#E2F0D9"></span><span><b>dentsu X</b><small>dentsu</small></span></span></td>
+<td>—</td>
+<td><span class="pill ret">Retention</span></td>
+</tr>
+<tr>
+<td><span class="rank">8</span></td>
+<td class="strong advertiser-cell">OCEAN PARK</td>
+<td>Entertainment</td>
+<td class="num">13.5</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#E2F0D9"></span><span><b>dentsu X</b><small>dentsu</small></span></span></td>
+<td>—</td>
+<td><span class="pill ret">Retention</span></td>
+</tr>
+<tr>
+<td><span class="rank">9</span></td>
+<td class="strong advertiser-cell">HongKong Disneyland</td>
+<td>Entertainment</td>
+<td class="num">12</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFEADD"></span><span><b>Zenith</b><small>Publicis Media</small></span></span></td>
+<td>—</td>
+<td><span class="pill ret">Retention</span></td>
+</tr>
+<tr>
+<td><span class="rank">10</span></td>
+<td class="strong advertiser-cell">WYETH NUTRITION</td>
+<td>Food &amp; Beverages</td>
+<td class="num">11.8</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFEADD"></span><span><b>Spark Foundry</b><small>Publicis Media</small></span></span></td>
+<td>OMD</td>
+<td><span class="pill win">New Business</span></td>
+</tr>
+</tbody></table></div></div>
+</section>
+<section class="section" id="agencies">
+<div class="section-head"><div><h2><span class="section-num">03</span>Agency Rankings</h2><p>Click one or several agencies to display their detail card on the right.</p></div></div>
+<div class="rank-tabs">
+<button class="rank-tab-btn active" data-target="panel1">New Biz Balance ranking by agency</button>
+<button class="rank-tab-btn" data-target="panel2">New Biz Balance ranking by Group</button>
+<button class="rank-tab-btn" data-target="panel3">Success Index (incl. retention) ranking by agency</button>
+<button class="rank-tab-btn" data-target="panel4">Success Index (incl. retention) ranking by group</button>
+</div>
+
+<div class="rank-panel active" id="panel1"><div class="subsection"><h3>New Biz Balance ranking by agency</h3><p class="panel-note">Agency ranking based on wins minus departures.</p><div class="card"><div class="table-wrap"><table class="sortable"><thead><tr><th>Rkg</th><th>Agency</th><th>Total NBB<br/><span class="th-note">Integrated Spends $m</span></th><th>Total Wins<br/><span class="th-note">Integrated Spends $m</span></th><th>Total Departures<br/><span class="th-note">Integrated Spends $m</span></th><th>Total Retentions<br/><span class="th-note">Integrated Spends $m</span></th><th>Nbr wins/departures</th></tr></thead><tbody><tr class="select-row"><td><span class="rank">1</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFEADD"></span><span><b>Spark Foundry</b><small>Publicis Media</small></span></span></td><td class="num pos">+42</td><td class="num pos">+49</td><td class="num neg">-7</td><td class="num pos">0</td><td>3/1</td></tr><tr class="select-row"><td><span class="rank">2</span></td><td><span class="agency-label"><span class="group-dot" style="background:#E2F0D9"></span><span><b>dentsu X</b><small>dentsu</small></span></span></td><td class="num pos">+27</td><td class="num pos">+28</td><td class="num neg">-1</td><td class="num pos">+46</td><td>3/1</td></tr><tr class="select-row"><td><span class="rank">3</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFEADD"></span><span><b>Starcom</b><small>Publicis Media</small></span></span></td><td class="num pos">+20</td><td class="num pos">+20</td><td class="num neg">-1</td><td class="num pos">+54</td><td>7/1</td></tr><tr class="select-row"><td><span class="rank">4</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFE699"></span><span><b>Hearts &amp; Science</b><small>Omnicom Media</small></span></span></td><td class="num pos">+19</td><td class="num pos">+21</td><td class="num neg">-2</td><td class="num pos">0</td><td>3/2</td></tr><tr class="select-row"><td><span class="rank">5</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFE699"></span><span><b>PHD</b><small>Omnicom Media</small></span></span></td><td class="num pos">+17</td><td class="num pos">+26</td><td class="num neg">-9</td><td class="num neg">-10</td><td>9/1</td></tr><tr class="select-row"><td><span class="rank">6</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFEADD"></span><span><b>Zenith</b><small>Publicis Media</small></span></span></td><td class="num pos">+15</td><td class="num pos">+24</td><td class="num neg">-9</td><td class="num pos">+12</td><td>11/2</td></tr><tr class="select-row"><td><span class="rank">7</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFE699"></span><span><b>UM incl. Initiative</b><small>Omnicom Media</small></span></span></td><td class="num pos">+13</td><td class="num pos">+25</td><td class="num neg">-12</td><td class="num pos">0</td><td>6/2</td></tr><tr class="select-row"><td><span class="rank">8</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFE699"></span><span><b>OMD</b><small>Omnicom Media</small></span></span></td><td class="num pos">+6</td><td class="num pos">+25</td><td class="num neg">-19</td><td class="num neg">-2</td><td>8/6</td></tr><tr class="select-row"><td><span class="rank">9</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFE4FF"></span><span><b>EssenceMediacom</b><small>WPP Media</small></span></span></td><td class="num pos">+4</td><td class="num pos">+11</td><td class="num neg">-7</td><td class="num pos">0</td><td>7/2</td></tr><tr class="select-row"><td><span class="rank">10</span></td><td><span class="agency-label"><span class="group-dot" style="background:#E2F0D9"></span><span><b>iProspect</b><small>dentsu</small></span></span></td><td class="num pos">+2</td><td class="num pos">+2</td><td class="num pos">0</td><td class="num pos">0</td><td>4/0</td></tr><tr class="select-row"><td><span class="rank">11</span></td><td><span class="agency-label"><span class="group-dot" style="background:#DCB9FF"></span><span><b>Havas Media</b><small>Havas Media Network</small></span></span></td><td class="num pos">0</td><td class="num pos">+10</td><td class="num neg">-10</td><td class="num pos">+1</td><td>8/3</td></tr><tr class="select-row"><td><span class="rank">12</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFE4FF"></span><span><b>Wavemaker</b><small>WPP Media</small></span></span></td><td class="num neg">-8</td><td class="num pos">+8</td><td class="num neg">-17</td><td class="num pos">0</td><td>2/4</td></tr><tr class="select-row"><td><span class="rank">13</span></td><td><span class="agency-label"><span class="group-dot" style="background:#E2F0D9"></span><span><b>Carat</b><small>dentsu</small></span></span></td><td class="num neg">-8</td><td class="num pos">+9</td><td class="num neg">-17</td><td class="num pos">+2</td><td>1/5</td></tr><tr class="select-row"><td><span class="rank">14</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFE4FF"></span><span><b>Mindshare</b><small>WPP Media</small></span></span></td><td class="num neg">-11</td><td class="num pos">+3</td><td class="num neg">-14</td><td class="num pos">0</td><td>2/9</td></tr></tbody></table></div></div></div></div>
+<div class="rank-panel" id="panel2"><div class="subsection"><h3>New Biz Balance ranking by Group</h3><p class="panel-note">Group ranking aggregated from agency wins, departures and retentions.</p><div class="card"><div class="table-wrap"><table class="sortable"><thead><tr><th>Rkg</th><th>Group</th><th>Total NBB<br/><span class="th-note">Integrated Spends $m</span></th><th>Total Wins<br/><span class="th-note">Integrated Spends $m</span></th><th>Total Departures<br/><span class="th-note">Integrated Spends $m</span></th><th>Total Retentions<br/><span class="th-note">Integrated Spends $m</span></th><th>Nbr wins/departures</th></tr></thead><tbody><tr class="select-row"><td><span class="rank">1</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFEADD"></span><span><b>Publicis Media</b><small>Group total</small></span></span></td><td class="num pos">+77</td><td class="num pos">+93</td><td class="num neg">-17</td><td class="num pos">+66</td><td>21/4</td></tr><tr class="select-row"><td><span class="rank">2</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFE699"></span><span><b>Omnicom Media</b><small>Group total</small></span></span></td><td class="num pos">+55</td><td class="num pos">+97</td><td class="num neg">-42</td><td class="num neg">-12</td><td>26/11</td></tr><tr class="select-row"><td><span class="rank">3</span></td><td><span class="agency-label"><span class="group-dot" style="background:#E2F0D9"></span><span><b>dentsu</b><small>Group total</small></span></span></td><td class="num pos">+21</td><td class="num pos">+39</td><td class="num neg">-18</td><td class="num pos">+48</td><td>8/6</td></tr><tr class="select-row"><td><span class="rank">4</span></td><td><span class="agency-label"><span class="group-dot" style="background:#DCB9FF"></span><span><b>Havas Media Network</b><small>Group total</small></span></span></td><td class="num pos">0</td><td class="num pos">+10</td><td class="num neg">-10</td><td class="num pos">+1</td><td>8/3</td></tr><tr class="select-row"><td><span class="rank">5</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFE4FF"></span><span><b>WPP Media</b><small>Group total</small></span></span></td><td class="num neg">-15</td><td class="num pos">+22</td><td class="num neg">-38</td><td class="num pos">0</td><td>11/15</td></tr></tbody></table></div></div></div></div>
+<div class="rank-panel" id="panel3"><div class="subsection"><h3>Success Index (incl. retention) ranking by agency</h3><p class="panel-note">Success Index = New Biz Balance + Retentions.</p><div class="card"><div class="table-wrap"><table class="sortable"><thead><tr><th>Rkg</th><th>Agency</th><th>Success Index<br/><span class="th-note">Integrated Spends $m</span></th><th>Total Wins<br/><span class="th-note">Integrated Spends $m</span></th><th>Total Departures<br/><span class="th-note">Integrated Spends $m</span></th><th>Total Retentions<br/><span class="th-note">Integrated Spends $m</span></th><th>Nbr wins/departures</th></tr></thead><tbody><tr class="select-row"><td><span class="rank">1</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFEADD"></span><span><b>Starcom</b><small>Publicis Media</small></span></span></td><td class="num pos">+74</td><td class="num pos">+20</td><td class="num neg">-1</td><td class="num pos">+54</td><td>7/1</td></tr><tr class="select-row"><td><span class="rank">2</span></td><td><span class="agency-label"><span class="group-dot" style="background:#E2F0D9"></span><span><b>dentsu X</b><small>dentsu</small></span></span></td><td class="num pos">+73</td><td class="num pos">+28</td><td class="num neg">-1</td><td class="num pos">+46</td><td>3/1</td></tr><tr class="select-row"><td><span class="rank">3</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFEADD"></span><span><b>Spark Foundry</b><small>Publicis Media</small></span></span></td><td class="num pos">+42</td><td class="num pos">+49</td><td class="num neg">-7</td><td class="num pos">0</td><td>3/1</td></tr><tr class="select-row"><td><span class="rank">4</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFEADD"></span><span><b>Zenith</b><small>Publicis Media</small></span></span></td><td class="num pos">+27</td><td class="num pos">+24</td><td class="num neg">-9</td><td class="num pos">+12</td><td>11/2</td></tr><tr class="select-row"><td><span class="rank">5</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFE699"></span><span><b>Hearts &amp; Science</b><small>Omnicom Media</small></span></span></td><td class="num pos">+19</td><td class="num pos">+21</td><td class="num neg">-2</td><td class="num pos">0</td><td>3/2</td></tr><tr class="select-row"><td><span class="rank">6</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFE699"></span><span><b>UM incl. Initiative</b><small>Omnicom Media</small></span></span></td><td class="num pos">+13</td><td class="num pos">+25</td><td class="num neg">-12</td><td class="num pos">0</td><td>6/2</td></tr><tr class="select-row"><td><span class="rank">7</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFE699"></span><span><b>PHD</b><small>Omnicom Media</small></span></span></td><td class="num pos">+7</td><td class="num pos">+26</td><td class="num neg">-9</td><td class="num neg">-10</td><td>9/1</td></tr><tr class="select-row"><td><span class="rank">8</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFE699"></span><span><b>OMD</b><small>Omnicom Media</small></span></span></td><td class="num pos">+4</td><td class="num pos">+25</td><td class="num neg">-19</td><td class="num neg">-2</td><td>8/6</td></tr><tr class="select-row"><td><span class="rank">9</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFE4FF"></span><span><b>EssenceMediacom</b><small>WPP Media</small></span></span></td><td class="num pos">+4</td><td class="num pos">+11</td><td class="num neg">-7</td><td class="num pos">0</td><td>7/2</td></tr><tr class="select-row"><td><span class="rank">10</span></td><td><span class="agency-label"><span class="group-dot" style="background:#E2F0D9"></span><span><b>iProspect</b><small>dentsu</small></span></span></td><td class="num pos">+2</td><td class="num pos">+2</td><td class="num pos">0</td><td class="num pos">0</td><td>4/0</td></tr><tr class="select-row"><td><span class="rank">11</span></td><td><span class="agency-label"><span class="group-dot" style="background:#DCB9FF"></span><span><b>Havas Media</b><small>Havas Media Network</small></span></span></td><td class="num pos">+1</td><td class="num pos">+10</td><td class="num neg">-10</td><td class="num pos">+1</td><td>8/3</td></tr><tr class="select-row"><td><span class="rank">12</span></td><td><span class="agency-label"><span class="group-dot" style="background:#E2F0D9"></span><span><b>Carat</b><small>dentsu</small></span></span></td><td class="num neg">-6</td><td class="num pos">+9</td><td class="num neg">-17</td><td class="num pos">+2</td><td>1/5</td></tr><tr class="select-row"><td><span class="rank">13</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFE4FF"></span><span><b>Wavemaker</b><small>WPP Media</small></span></span></td><td class="num neg">-8</td><td class="num pos">+8</td><td class="num neg">-17</td><td class="num pos">0</td><td>2/4</td></tr><tr class="select-row"><td><span class="rank">14</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFE4FF"></span><span><b>Mindshare</b><small>WPP Media</small></span></span></td><td class="num neg">-11</td><td class="num pos">+3</td><td class="num neg">-14</td><td class="num pos">0</td><td>2/9</td></tr></tbody></table></div></div></div></div>
+<div class="rank-panel" id="panel4"><div class="subsection"><h3>Success Index (incl. retention) ranking by group</h3><p class="panel-note">Group Success Index = Group New Biz Balance + Group Retentions.</p><div class="card"><div class="table-wrap"><table class="sortable"><thead><tr><th>Rkg</th><th>Group</th><th>Success Index<br/><span class="th-note">Integrated Spends $m</span></th><th>Total Wins<br/><span class="th-note">Integrated Spends $m</span></th><th>Total Departures<br/><span class="th-note">Integrated Spends $m</span></th><th>Total Retentions<br/><span class="th-note">Integrated Spends $m</span></th><th>Nbr wins/departures</th></tr></thead><tbody><tr class="select-row"><td><span class="rank">1</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFEADD"></span><span><b>Publicis Media</b><small>Group total</small></span></span></td><td class="num pos">+143</td><td class="num pos">+93</td><td class="num neg">-17</td><td class="num pos">+66</td><td>21/4</td></tr><tr class="select-row"><td><span class="rank">2</span></td><td><span class="agency-label"><span class="group-dot" style="background:#E2F0D9"></span><span><b>dentsu</b><small>Group total</small></span></span></td><td class="num pos">+69</td><td class="num pos">+39</td><td class="num neg">-18</td><td class="num pos">+48</td><td>8/6</td></tr><tr class="select-row"><td><span class="rank">3</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFE699"></span><span><b>Omnicom Media</b><small>Group total</small></span></span></td><td class="num pos">+43</td><td class="num pos">+97</td><td class="num neg">-42</td><td class="num neg">-12</td><td>26/11</td></tr><tr class="select-row"><td><span class="rank">4</span></td><td><span class="agency-label"><span class="group-dot" style="background:#DCB9FF"></span><span><b>Havas Media Network</b><small>Group total</small></span></span></td><td class="num pos">+1</td><td class="num pos">+10</td><td class="num neg">-10</td><td class="num pos">+1</td><td>8/3</td></tr><tr class="select-row"><td><span class="rank">5</span></td><td><span class="agency-label"><span class="group-dot" style="background:#FFE4FF"></span><span><b>WPP Media</b><small>Group total</small></span></span></td><td class="num neg">-15</td><td class="num pos">+22</td><td class="num neg">-38</td><td class="num pos">0</td><td>11/15</td></tr></tbody></table></div></div></div></div>
+</section>
+<section class="section" id="moves">
+<div class="section-head"><div><h2><span class="section-num">04</span>All Moves</h2><p>Advertisers, winning agency, incumbent agency and move type — all 24 recorded moves.</p></div></div>
+<div class="card"><div class="table-wrap"><table class="sortable"><thead><tr><th>#</th><th>Advertiser</th><th>Sector</th><th>Integrated spendings mUSD</th><th>Winning agency</th><th>Incumbent agency</th><th>Type</th></tr></thead><tbody>
+<tr>
+<td><span class="rank">1</span></td>
+<td class="strong advertiser-cell">FrieslandCampina</td>
+<td>Food &amp; Beverages</td>
+<td class="num">47.6</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFEADD"></span><span><b>Starcom</b><small>Publicis Media</small></span></span></td>
+<td>—</td>
+<td><span class="pill ret">Retention</span></td>
+</tr>
+<tr>
+<td><span class="rank">2</span></td>
+<td class="strong advertiser-cell">NESTLE</td>
+<td>Food &amp; Beverages</td>
+<td class="num">29.1</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFEADD"></span><span><b>Spark Foundry</b><small>Publicis Media</small></span></span></td>
+<td>OMD</td>
+<td><span class="pill win">New Business</span></td>
+</tr>
+<tr>
+<td><span class="rank">3</span></td>
+<td class="strong advertiser-cell">Telford</td>
+<td>Retail</td>
+<td class="num">27.5</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#E2F0D9"></span><span><b>dentsu X</b><small>dentsu</small></span></span></td>
+<td>—</td>
+<td><span class="pill win">New Business</span></td>
+</tr>
+<tr>
+<td><span class="rank">4</span></td>
+<td class="strong advertiser-cell">KAO</td>
+<td>Personal Care</td>
+<td class="num">19</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#E2F0D9"></span><span><b>dentsu X</b><small>dentsu</small></span></span></td>
+<td>—</td>
+<td><span class="pill ret">Retention</span></td>
+</tr>
+<tr>
+<td><span class="rank">5</span></td>
+<td class="strong advertiser-cell">AS WATSON</td>
+<td>Retail</td>
+<td class="num">18</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFE699"></span><span><b>Hearts &amp; Science</b><small>Omnicom Media</small></span></span></td>
+<td>Carat</td>
+<td><span class="pill win">New Business</span></td>
+</tr>
+<tr>
+<td><span class="rank">6</span></td>
+<td class="strong advertiser-cell">OSIM</td>
+<td>Retail</td>
+<td class="num">14.2</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFE699"></span><span><b>UM incl. Initiative</b><small>Omnicom Media</small></span></span></td>
+<td>—</td>
+<td><span class="pill win">New Business</span></td>
+</tr>
+<tr>
+<td><span class="rank">7</span></td>
+<td class="strong advertiser-cell">ASAHI</td>
+<td>Food &amp; Beverages</td>
+<td class="num">13.5</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#E2F0D9"></span><span><b>dentsu X</b><small>dentsu</small></span></span></td>
+<td>—</td>
+<td><span class="pill ret">Retention</span></td>
+</tr>
+<tr>
+<td><span class="rank">8</span></td>
+<td class="strong advertiser-cell">OCEAN PARK</td>
+<td>Entertainment</td>
+<td class="num">13.5</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#E2F0D9"></span><span><b>dentsu X</b><small>dentsu</small></span></span></td>
+<td>—</td>
+<td><span class="pill ret">Retention</span></td>
+</tr>
+<tr>
+<td><span class="rank">9</span></td>
+<td class="strong advertiser-cell">HongKong Disneyland</td>
+<td>Entertainment</td>
+<td class="num">12</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFEADD"></span><span><b>Zenith</b><small>Publicis Media</small></span></span></td>
+<td>—</td>
+<td><span class="pill ret">Retention</span></td>
+</tr>
+<tr>
+<td><span class="rank">10</span></td>
+<td class="strong advertiser-cell">WYETH NUTRITION</td>
+<td>Food &amp; Beverages</td>
+<td class="num">11.8</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFEADD"></span><span><b>Spark Foundry</b><small>Publicis Media</small></span></span></td>
+<td>OMD</td>
+<td><span class="pill win">New Business</span></td>
+</tr>
+<tr>
+<td><span class="rank">11</span></td>
+<td class="strong advertiser-cell">JUNG KWUN JANG</td>
+<td>Health &amp; Wellness</td>
+<td class="num">11.7</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFE699"></span><span><b>PHD</b><small>Omnicom Media</small></span></span></td>
+<td>—</td>
+<td><span class="pill win">New Business</span></td>
+</tr>
+<tr>
+<td><span class="rank">12</span></td>
+<td class="strong advertiser-cell">CHINA MOBILE INTERNATIONAL</td>
+<td>Telecom</td>
+<td class="num">10.4</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFEADD"></span><span><b>Zenith</b><small>Publicis Media</small></span></span></td>
+<td>—</td>
+<td><span class="pill win">New Business</span></td>
+</tr>
+<tr>
+<td><span class="rank">13</span></td>
+<td class="strong advertiser-cell">Vitasoy</td>
+<td>Food &amp; Beverages</td>
+<td class="num">8.8</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#E2F0D9"></span><span><b>Carat</b><small>dentsu</small></span></span></td>
+<td>PHD</td>
+<td><span class="pill win">New Business</span></td>
+</tr>
+<tr>
+<td><span class="rank">14</span></td>
+<td class="strong advertiser-cell">JEBSEN BEVERAGE</td>
+<td>Alcohol</td>
+<td class="num">8.4</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFEADD"></span><span><b>Spark Foundry</b><small>Publicis Media</small></span></span></td>
+<td>Wavemaker</td>
+<td><span class="pill win">New Business</span></td>
+</tr>
+<tr>
+<td><span class="rank">15</span></td>
+<td class="strong advertiser-cell">SUN LIFE ASSURANCE</td>
+<td>Financial &amp; Insurance</td>
+<td class="num">7.8</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFE4FF"></span><span><b>Wavemaker</b><small>WPP Media</small></span></span></td>
+<td>Havas Media</td>
+<td><span class="pill win">New Business</span></td>
+</tr>
+<tr>
+<td><span class="rank">16</span></td>
+<td class="strong advertiser-cell">NONGFU SPRING</td>
+<td>Food &amp; Beverages</td>
+<td class="num">7.4</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFEADD"></span><span><b>Starcom</b><small>Publicis Media</small></span></span></td>
+<td>—</td>
+<td><span class="pill win">New Business</span></td>
+</tr>
+<tr>
+<td><span class="rank">17</span></td>
+<td class="strong advertiser-cell">HKMC ANNUITY</td>
+<td>Organizations &amp; Public</td>
+<td class="num">7</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFE699"></span><span><b>OMD</b><small>Omnicom Media</small></span></span></td>
+<td>Spark Foundry</td>
+<td><span class="pill win">New Business</span></td>
+</tr>
+<tr>
+<td><span class="rank">18</span></td>
+<td class="strong advertiser-cell">WEBULL CORPORATION</td>
+<td>Financial</td>
+<td class="num">6.2</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFE4FF"></span><span><b>EssenceMediacom</b><small>WPP Media</small></span></span></td>
+<td>—</td>
+<td><span class="pill win">New Business</span></td>
+</tr>
+<tr>
+<td><span class="rank">19</span></td>
+<td class="strong advertiser-cell">CHINA CONSTRUCTION BANK</td>
+<td>Financial &amp; Insurance</td>
+<td class="num">5.8</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFE699"></span><span><b>Hearts &amp; Science</b><small>Omnicom Media</small></span></span></td>
+<td>PHD</td>
+<td><span class="pill transfer">Transfer</span></td>
+</tr>
+<tr>
+<td><span class="rank">20</span></td>
+<td class="strong advertiser-cell">MOX BANK</td>
+<td>Financial &amp; Insurance</td>
+<td class="num">5.4</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFE699"></span><span><b>Hearts &amp; Science</b><small>Omnicom Media</small></span></span></td>
+<td>PHD</td>
+<td><span class="pill transfer">Transfer</span></td>
+</tr>
+<tr>
+<td><span class="rank">21</span></td>
+<td class="strong advertiser-cell">BANK OF CHINA HONG KONG</td>
+<td>Financial &amp; Insurance</td>
+<td class="num">5.4</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFE699"></span><span><b>UM incl. Initiative</b><small>Omnicom Media</small></span></span></td>
+<td>Zenith</td>
+<td><span class="pill win">New Business</span></td>
+</tr>
+<tr>
+<td><span class="rank">22</span></td>
+<td class="strong advertiser-cell">MGM RESORTS</td>
+<td>Entertainment</td>
+<td class="num">5</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFEADD"></span><span><b>Starcom</b><small>Publicis Media</small></span></span></td>
+<td>—</td>
+<td><span class="pill win">New Business</span></td>
+</tr>
+<tr>
+<td><span class="rank">23</span></td>
+<td class="strong advertiser-cell">iNOVA PHARMACEUTICAL</td>
+<td>Pharmaceutical</td>
+<td class="num">5</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFE699"></span><span><b>OMD</b><small>Omnicom Media</small></span></span></td>
+<td>Mindshare</td>
+<td><span class="pill win">New Business</span></td>
+</tr>
+<tr>
+<td><span class="rank">24</span></td>
+<td class="strong advertiser-cell">JD.COM</td>
+<td>eCommerce</td>
+<td class="num">4.8</td>
+<td><span class="agency-label"><span class="group-dot" style="background:#FFE699"></span><span><b>PHD</b><small>Omnicom Media</small></span></span></td>
+<td>—</td>
+<td><span class="pill win">New Business</span></td>
+</tr></tbody></table></div></div>
+</section>
+<div class="footer"><span>©2026 RECMA | All Rights Reserved | Content Cannot Be Reproduced Without Written Permission</span><span>Hong Kong · New Business Balance · March 2026</span></div>
+</main>
+<script>
+(function(){
+const T21_MOVES=[
+  {rank:1,adv:'FrieslandCampina',spend:47.6,winner:'Starcom',wGroup:'Publicis Media',inc:null,type:'ret'},
+  {rank:2,adv:'NESTLE',spend:29.1,winner:'Spark Foundry',wGroup:'Publicis Media',inc:'OMD',type:'win'},
+  {rank:3,adv:'Telford',spend:27.5,winner:'dentsu X',wGroup:'dentsu',inc:null,type:'win'},
+  {rank:4,adv:'KAO',spend:19,winner:'dentsu X',wGroup:'dentsu',inc:null,type:'ret'},
+  {rank:5,adv:'AS WATSON',spend:18,winner:'Hearts & Science',wGroup:'Omnicom Media',inc:'Carat',type:'win'},
+  {rank:6,adv:'OSIM',spend:14.2,winner:'UM incl. Initiative',wGroup:'Omnicom Media',inc:null,type:'win'},
+  {rank:7,adv:'ASAHI',spend:13.5,winner:'dentsu X',wGroup:'dentsu',inc:null,type:'ret'},
+  {rank:8,adv:'OCEAN PARK',spend:13.5,winner:'dentsu X',wGroup:'dentsu',inc:null,type:'ret'},
+  {rank:9,adv:'HongKong Disneyland',spend:12,winner:'Zenith',wGroup:'Publicis Media',inc:null,type:'ret'},
+  {rank:10,adv:'WYETH NUTRITION',spend:11.8,winner:'Spark Foundry',wGroup:'Publicis Media',inc:'OMD',type:'win'},
+  {rank:11,adv:'JUNG KWUN JANG',spend:11.7,winner:'PHD',wGroup:'Omnicom Media',inc:null,type:'win'},
+  {rank:12,adv:'CHINA MOBILE INTERNATIONAL',spend:10.4,winner:'Zenith',wGroup:'Publicis Media',inc:null,type:'win'},
+  {rank:13,adv:'Vitasoy',spend:8.8,winner:'Carat',wGroup:'dentsu',inc:'PHD',type:'win'},
+  {rank:14,adv:'JEBSEN BEVERAGE',spend:8.4,winner:'Spark Foundry',wGroup:'Publicis Media',inc:'Wavemaker',type:'win'},
+  {rank:15,adv:'SUN LIFE ASSURANCE',spend:7.8,winner:'Wavemaker',wGroup:'WPP Media',inc:'Havas Media',type:'win'},
+  {rank:16,adv:'NONGFU SPRING',spend:7.4,winner:'Starcom',wGroup:'Publicis Media',inc:null,type:'win'},
+  {rank:17,adv:'HKMC ANNUITY',spend:7,winner:'OMD',wGroup:'Omnicom Media',inc:'Spark Foundry',type:'win'},
+  {rank:18,adv:'WEBULL CORPORATION',spend:6.2,winner:'EssenceMediacom',wGroup:'WPP Media',inc:null,type:'win'},
+  {rank:19,adv:'CHINA CONSTRUCTION BANK',spend:5.8,winner:'Hearts & Science',wGroup:'Omnicom Media',inc:'PHD',type:'transfer'},
+  {rank:20,adv:'MOX BANK',spend:5.4,winner:'Hearts & Science',wGroup:'Omnicom Media',inc:'PHD',type:'transfer'},
+  {rank:21,adv:'BANK OF CHINA HONG KONG',spend:5.4,winner:'UM incl. Initiative',wGroup:'Omnicom Media',inc:'Zenith',type:'win'},
+  {rank:22,adv:'MGM RESORTS',spend:5,winner:'Starcom',wGroup:'Publicis Media',inc:null,type:'win'},
+  {rank:23,adv:'iNOVA PHARMACEUTICAL',spend:5,winner:'OMD',wGroup:'Omnicom Media',inc:'Mindshare',type:'win'},
+  {rank:24,adv:'JD.COM',spend:4.8,winner:'PHD',wGroup:'Omnicom Media',inc:null,type:'win'}
+];
+const T21_INFO={
+  'Spark Foundry':{c:'#FFEADD',g:'Publicis Media'},
+  'dentsu X':{c:'#E2F0D9',g:'dentsu'},
+  'Starcom':{c:'#FFEADD',g:'Publicis Media'},
+  'Hearts & Science':{c:'#FFE699',g:'Omnicom Media'},
+  'PHD':{c:'#FFE699',g:'Omnicom Media'},
+  'Zenith':{c:'#FFEADD',g:'Publicis Media'},
+  'UM incl. Initiative':{c:'#FFE699',g:'Omnicom Media'},
+  'OMD':{c:'#FFE699',g:'Omnicom Media'},
+  'EssenceMediacom':{c:'#FFE4FF',g:'WPP Media'},
+  'iProspect':{c:'#E2F0D9',g:'dentsu'},
+  'Havas Media':{c:'#DCB9FF',g:'Havas Media Network'},
+  'Wavemaker':{c:'#FFE4FF',g:'WPP Media'},
+  'Carat':{c:'#E2F0D9',g:'dentsu'},
+  'Mindshare':{c:'#FFE4FF',g:'WPP Media'}
+};
+function san(n){return n.replace(/[^a-zA-Z0-9]/g,'');}
+function fmtAmt(v){return v===0?'—':(v>0?'+':'')+v.toFixed(1)+'m';}
+function miniTbody(rows,role){
+  if(!rows.length) return '<tr><td colspan="3" style="color:#94A3B8;font-style:italic;padding:10px 7px">None recorded</td></tr>';
+  return rows.map(m=>{
+    const c3=role==='dep'?m.winner:(m.inc||'—');
+    return '<tr><td class="advertiser-cell">'+m.adv+'</td><td class="num">'+m.spend+'</td><td>'+c3+'</td></tr>';
+  }).join('');
+}
+function buildCard(name,isGroup,panelId){
+  const key=san(name);
+  const id=panelId+'-detail-'+key;
+  let color='#E5E7EB',sub='';
+  if(isGroup){
+    const e=Object.entries(T21_INFO).find(([,v])=>v.g===name);
+    if(e) color=e[1].c;
+    sub='Group total';
+  } else {
+    const info=T21_INFO[name]||{};
+    color=info.c||'#E5E7EB'; sub=info.g||'';
+  }
+  const wins=T21_MOVES.filter(m=>(isGroup?m.wGroup===name:m.winner===name)&&m.type==='win');
+  const rets=T21_MOVES.filter(m=>(isGroup?m.wGroup===name:m.winner===name)&&m.type==='ret');
+  const deps=T21_MOVES.filter(m=>{
+    if(!m.inc) return false;
+    if(isGroup){const i=T21_INFO[m.inc];return i&&i.g===name&&m.wGroup!==name;}
+    return m.inc===name;
+  });
+  const tw=wins.reduce((s,m)=>s+m.spend,0);
+  const tr2=rets.reduce((s,m)=>s+m.spend,0);
+  const td=deps.reduce((s,m)=>s+m.spend,0);
+  return '<div class="detail-card" id="'+id+'">'
+    +'<div class="detail-card-head" style="position:relative;padding-right:44px">'
+    +'<button onclick="t21Close(\''+id+'\')" style="position:absolute;top:50%;right:12px;transform:translateY(-50%);border:none;background:rgba(0,0,0,.07);border-radius:50%;width:26px;height:26px;cursor:pointer;font-size:13px;color:#6B7280;line-height:1">&#x2715;</button>'
+    +'<span class="agency-label"><span class="group-dot" style="background:'+color+'"></span><span><b style="font-size:17px">'+name+'</b><small>'+sub+'</small></span></span>'
+    +'</div>'
+    +'<div class="detail-columns">'
+    +'<section><h4>Wins <span class="section-total">'+fmtAmt(tw)+'</span></h4>'
+    +'<table class="detail-table"><thead><tr><th>Advertiser</th><th>mUSD</th><th>From</th></tr></thead><tbody>'+miniTbody(wins,'win')+'</tbody></table></section>'
+    +'<section><h4>Retentions <span class="section-total">'+fmtAmt(tr2)+'</span></h4>'
+    +'<table class="detail-table"><thead><tr><th>Advertiser</th><th>mUSD</th><th></th></tr></thead><tbody>'+miniTbody(rets,'ret')+'</tbody></table></section>'
+    +'<section style="grid-column:1/-1"><h4>Departures <span class="section-total" style="'+(td>0?'color:#B42318':'')+'">'+( td>0?'-'+td.toFixed(1)+'m':'—')+'</span></h4>'
+    +'<table class="detail-table"><thead><tr><th>Advertiser</th><th>mUSD</th><th>Won by</th></tr></thead><tbody>'+miniTbody(deps,'dep')+'</tbody></table></section>'
+    +'</div></div>';
+}
+window.t21Close=function(id){
+  const card=document.getElementById(id);if(!card)return;
+  card.classList.remove('active');
+  const dash=id.indexOf('-detail-');
+  const panelId=id.substring(0,dash),key=id.substring(dash+8);
+  const row=document.querySelector('.select-row[data-mode="'+panelId+'"][data-target="'+key+'"]');
+  if(row) row.classList.remove('active');
+  const sub=card.closest('.subsection');
+  if(sub) sub.classList.toggle('has-selection',sub.querySelectorAll('.select-row.active').length>0);
+};
+function setupPanel(panelEl,isGroup){
+  if(!panelEl) return;
+  const pid=panelEl.id;
+  const sub=panelEl.querySelector('.subsection');if(!sub)return;
+  let zone=sub.querySelector('.details-zone');
+  if(!zone){zone=document.createElement('div');zone.className='details-zone';sub.appendChild(zone);}
+  panelEl.querySelectorAll('.select-row').forEach(row=>{
+    const nb=row.querySelector('.agency-label b');if(!nb)return;
+    const name=nb.textContent.trim();
+    const key=san(name);
+    const cid=pid+'-detail-'+key;
+    row.dataset.mode=pid; row.dataset.target=key;
+    if(!document.getElementById(cid)) zone.insertAdjacentHTML('beforeend',buildCard(name,isGroup,pid));
+    row.addEventListener('click',()=>{
+      const was=row.classList.contains('active');
+      row.classList.toggle('active',!was);
+      const card=document.getElementById(cid);
+      if(card) card.classList.toggle('active',!was);
+      sub.classList.toggle('has-selection',sub.querySelectorAll('.select-row.active').length>0);
+    });
+  });
+}
+document.addEventListener('DOMContentLoaded',function(){
+  setupPanel(document.getElementById('panel1'),false);
+  setupPanel(document.getElementById('panel2'),true);
+  setupPanel(document.getElementById('panel3'),false);
+  setupPanel(document.getElementById('panel4'),true);
+  const tabs=document.querySelectorAll('.tnav-tab[href^="#"]');
+  const secs=Array.from(tabs).map(t=>document.querySelector(t.getAttribute('href'))).filter(Boolean);
+  function upNav(){
+    const y=window.scrollY+80;
+    let cur=secs[0];
+    secs.forEach(s=>{if(s&&s.offsetTop<=y)cur=s;});
+    tabs.forEach(t=>t.classList.toggle('active',t.getAttribute('href')==='#'+cur.id));
+  }
+  window.addEventListener('scroll',upNav,{passive:true});
+  upNav();
+});
+document.querySelectorAll('.sortable th').forEach((th,i)=>{
+  th.title='Click to sort';
+  th.addEventListener('click',()=>{
+    const table=th.closest('table');
+    const tbody=table.tBodies[0];
+    const rows=Array.from(tbody.rows);
+    const asc=th.dataset.asc!=='true';
+    table.querySelectorAll('th').forEach(h=>h.dataset.asc='');
+    th.dataset.asc=asc?'true':'false';
+    function cv(row){
+      const txt=(row.cells[i]?.innerText||'').trim();
+      const n=txt.replace(/\$/g,'').replace(/mUSD/gi,'').replace(/m/gi,'').replace(/%/g,'').replace(/\+/g,'').replace(/,/g,'').trim();
+      const num=parseFloat(n);
+      if(!Number.isNaN(num)&&/[-+]?\d/.test(n))return{t:'n',v:num};
+      return{t:'s',v:txt.toLowerCase()};
+    }
+    rows.sort((a,b)=>{const av=cv(a),bv=cv(b);if(av.t==='n'&&bv.t==='n')return asc?av.v-bv.v:bv.v-av.v;return asc?String(av.v).localeCompare(String(bv.v)):String(bv.v).localeCompare(String(av.v));});
+    rows.forEach(r=>tbody.appendChild(r));
+  });
+});
+}());
+</script>
+<script id="ranking-tabs-js">
+function initRankingTabs(){
+  const buttons=document.querySelectorAll('.rank-tab-btn');
+  const panels=document.querySelectorAll('.rank-panel');
+  buttons.forEach(btn=>{
+    btn.onclick=function(){
+      const target=this.dataset.target;
+      buttons.forEach(b=>b.classList.remove('active'));
+      panels.forEach(p=>p.classList.remove('active'));
+      this.classList.add('active');
+      const panel=document.getElementById(target);
+      if(panel) panel.classList.add('active');
+    };
+  });
+}
+document.addEventListener('DOMContentLoaded', initRankingTabs);
+initRankingTabs();
+</script>
+</body>
+</html>

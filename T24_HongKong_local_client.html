@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Local Clients · Hong Kong · RECMA</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F4F6;--ink:#111827;--muted:#6B7280;--line:#E5E7EB;--card:#fff;--accent:#D81B45;
+  --shadow:0 2px 6px rgba(0,0,0,.04),0 14px 34px rgba(15,23,42,.08);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);font-family:'IBM Plex Sans',sans-serif;color:var(--ink);font-size:14px;line-height:1.5}
+.top{position:sticky;top:0;background:#111827;color:white;padding:15px 24px;z-index:10;display:flex;justify-content:space-between;align-items:center}
+.top strong{letter-spacing:.01em}.top button{background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:8px 12px;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:11px}
+.wrap{max-width:1260px;margin:auto;padding:42px 24px}
+.hero{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:22px}
+.kicker{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;margin-bottom:8px}
+h1{font-size:48px;line-height:1;margin:0 0 12px;letter-spacing:-.04em}h1 em{font-style:normal;color:var(--accent)}.sub{color:#4B5563;margin:0;font-size:16px;max-width:760px}
+.hint{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);background:white;border:1px solid var(--line);border-radius:999px;padding:8px 12px;white-space:nowrap}
+.layout{display:grid;grid-template-columns:minmax(380px,470px) 1fr;gap:18px;align-items:start}
+.panel{background:white;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+.panel-head{padding:18px 20px;border-bottom:1px solid var(--line);background:#F9FAFB}
+.panel-head h2{margin:0;font-size:20px;letter-spacing:-.02em}.panel-head p{margin:5px 0 0;color:var(--muted);font-size:12px}
+table{width:100%;border-collapse:collapse}th{background:#F9FAFB;color:#4B5563;font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}td{padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:middle}tr:last-child td{border-bottom:0}tbody tr{cursor:pointer}tbody tr:hover{background:#F9FAFB}tbody tr.active{background:#FDECEF;box-shadow:inset 5px 0 0 var(--accent)}tbody tr.active .agency-cell:before{content:'✓';display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--accent);color:white;font-family:'IBM Plex Mono';font-size:11px;margin-right:2px}
+th:nth-child(3),td:nth-child(3),th:nth-child(4),td:nth-child(4){text-align:right}.agency-cell{display:flex;align-items:center;gap:10px;font-weight:700}.dot{width:8px;height:28px;border-radius:999px;border:1px solid rgba(0,0,0,.12);display:inline-block;flex:0 0 auto}.dot.big{width:10px;height:42px}.group{display:block;color:var(--muted);font-family:'IBM Plex Mono';font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;margin-top:2px}.num{font-weight:700;font-size:21px;letter-spacing:-.02em;color:#111827!important}.pts{display:inline-flex;align-items:center;justify-content:center;height:26px;min-width:42px;padding:0 10px;border-radius:999px;font-family:'IBM Plex Mono';font-size:12px;font-weight:700;white-space:nowrap}.pts.top{background:#F5E7A1;color:#6F5600}.pts.mid{background:#F7D8CF;color:#9B4B34}.pts.none{background:#F3F0E8;color:#8A8578}.chev{color:var(--muted);font-family:'IBM Plex Mono'}
+.detail{display:none}.detail.active{display:block}.detail-hero{padding:24px 26px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px;background:linear-gradient(180deg,#fff,#F8FAFC)}.detail-title{display:flex;align-items:center;gap:14px}.detail-title h3{font-size:33px;line-height:1;margin:0;letter-spacing:-.035em}.detail-title small{display:block;margin-top:4px;font-family:'IBM Plex Mono';font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.detail-count{text-align:right}.detail-count b{display:block;font-size:58px;line-height:.85;letter-spacing:-.06em}.detail-count span{font-size:12px;color:var(--muted)}
+.client-list{padding:12px 24px 24px}.client-row{display:grid;grid-template-columns:1fr 150px;gap:10px;align-items:baseline;padding:12px 4px;border-bottom:1px solid #EEF2F7}.client-row:last-child{border-bottom:0}.client-name{font-weight:600;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.client-year,.client-value{font-family:'IBM Plex Mono';font-size:12px;text-align:right;color:var(--muted)}.client-value{color:#111827;font-weight:700}.client-row.win .client-name,.client-row.win .client-year{color:var(--accent);font-weight:800}.rank{font-family:'IBM Plex Mono';font-size:10px;color:var(--muted);margin-right:8px}.empty{display:none;padding:36px 22px;text-align:center;color:var(--muted)}.empty.active{display:block}
+@media(max-width:960px){.hero{display:block;padding:30px 24px 28px}.hint{display:inline-block}.hero-actions{justify-content:flex-start;margin-top:20px}.layout{grid-template-columns:1fr}}
+@media print{.hint,.hero-print-btn{display:none}.layout{display:block}.panel{box-shadow:none;margin-bottom:14px}.detail{display:block!important;break-inside:avoid}.empty{display:none!important}tr{break-inside:avoid}@page{size:A4 landscape;margin:12mm}}
+
+/* RECMA compact integrated header */
+.wrap{max-width:1260px;padding:26px 24px 42px}.hero{align-items:center;margin-bottom:22px;padding:30px 34px;border-radius:24px;background:linear-gradient(135deg,#111827 0%,#5B1732 58%,#D81B45 100%);box-shadow:0 18px 46px rgba(17,24,39,.20);color:#fff}.kicker{color:rgba(255,255,255,.72);margin-bottom:7px}.hero h1{font-size:clamp(32px,4vw,54px);margin:0 0 7px;color:#fff}.hero h1 em{color:#fff}.sub{color:#FBCFE8;font-size:15px}.hero-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}.hero-print-btn{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 12px;color:#fff;cursor:pointer;font-family:'IBM Plex Mono';font-size:11px;font-weight:700;backdrop-filter:blur(8px)}.hint{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;backdrop-filter:blur(8px)}.pts.mid{background:#DBEAFE;color:#1D4ED8}.client-header{display:grid;grid-template-columns:1fr 150px;gap:10px;align-items:baseline;padding:10px 4px 8px;border-bottom:1px solid var(--line);color:#4B5563;font-family:'IBM Plex Mono';font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}.client-header span:nth-child(2){text-align:right}
+
+</style>
+<style id="structure-blue-theme">:root{--accent:#2563EB}.hero{background:linear-gradient(135deg,#111827 0%,#1E3A5F 62%,#2563EB 100%)!important}.sub{color:#DBEAFE!important}tbody tr.active{background:#EFF6FF!important}</style>
+</head>
+<body>
+<main class="wrap">
+  <section class="hero">
+    <div><div class="kicker">RECMA · Hong Kong · Qualitative Evaluation</div><h1><em>Local Clients</em></h1><p class="sub">Number and share of local clients.</p></div>
+    <div class="hero-actions">
+      <button class="hero-print-btn" type="button" onclick="window.print()">Print / PDF</button>
+      <div class="hint">Click agencies to select / deselect</div>
+    </div>
+  </section>
+  <section class="layout report-interactive">
+    <div class="panel">
+      <div class="panel-head"><h2>Agency ranking</h2><p>Multi-selection enabled.</p></div>
+      <table><thead><tr><th>#</th><th>Agency</th><th>Number of Local Clients</th><th>RECMA Points</th><th></th></tr></thead><tbody>
+<tr class="active" data-target="omd">
+  <td>1</td>
+  <td><span class="agency-cell"><span class="dot" style="background:#FFE699"></span><span>OMD<span class="group">Omnicom Media</span></span></span></td>
+  <td class="num">7</td>
+  <td><span class="pts top">2 pts</span></td>
+  <td class="chev">›</td>
+</tr>
+<tr class="" data-target="phd">
+  <td>2</td>
+  <td><span class="agency-cell"><span class="dot" style="background:#FFE699"></span><span>PHD<span class="group">Omnicom Media</span></span></span></td>
+  <td class="num">6</td>
+  <td><span class="pts top">2 pts</span></td>
+  <td class="chev">›</td>
+</tr>
+<tr class="" data-target="carat">
+  <td>2</td>
+  <td><span class="agency-cell"><span class="dot" style="background:#E2F0D9"></span><span>Carat<span class="group">dentsu</span></span></span></td>
+  <td class="num">6</td>
+  <td><span class="pts top">2 pts</span></td>
+  <td class="chev">›</td>
+</tr>
+<tr class="" data-target="starcom">
+  <td>4</td>
+  <td><span class="agency-cell"><span class="dot" style="background:#FFEADD"></span><span>Starcom<span class="group">Publicis Media</span></span></span></td>
+  <td class="num">5</td>
+  <td><span class="pts mid">1 pt</span></td>
+  <td class="chev">›</td>
+</tr>
+<tr class="" data-target="havas">
+  <td>5</td>
+  <td><span class="agency-cell"><span class="dot" style="background:#DCB9FF"></span><span>Havas Media<span class="group">Havas</span></span></span></td>
+  <td class="num">4</td>
+  <td><span class="pts mid">1 pt</span></td>
+  <td class="chev">›</td>
+</tr></tbody></table>
+    </div>
+    <div class="panel">
+      
+<div class="detail active" id="omd">
+  <div class="detail-hero">
+    <div class="detail-title">
+      <span class="dot big" style="background:#FFE699"></span>
+      <div><h3 style="color:#5F4500">OMD</h3><small>Omnicom Media</small></div>
+    </div>
+    <div class="detail-count"><b style="color:#5F4500">7</b><span>Number of Local Clients</span></div>
+  </div>
+  <div class="client-list"><div class="client-header"><span>Advertiser</span><span>Integrated Spendings</span></div><div class="client-row">
+  <span class="client-name"><span class="rank">01</span>Vita Green Products</span>
+  <span class="client-value">—</span>
+</div>
+<div class="client-row">
+  <span class="client-name"><span class="rank">02</span>Octopus Cards</span>
+  <span class="client-value">—</span>
+</div>
+<div class="client-row">
+  <span class="client-name"><span class="rank">03</span>JBM Healthcare</span>
+  <span class="client-value">—</span>
+</div>
+<div class="client-row">
+  <span class="client-name"><span class="rank">04</span>Mox Bank</span>
+  <span class="client-value">—</span>
+</div></div>
+</div>
+<div class="detail" id="phd">
+  <div class="detail-hero">
+    <div class="detail-title">
+      <span class="dot big" style="background:#FFE699"></span>
+      <div><h3 style="color:#5F4500">PHD</h3><small>Omnicom Media</small></div>
+    </div>
+    <div class="detail-count"><b style="color:#5F4500">6</b><span>Number of Local Clients</span></div>
+  </div>
+  <div class="client-list"><div class="client-header"><span>Advertiser</span><span>Integrated Spendings</span></div><div class="client-row">
+  <span class="client-name"><span class="rank">01</span>Cafe de Coral Group</span>
+  <span class="client-value">—</span>
+</div>
+<div class="client-row">
+  <span class="client-name"><span class="rank">02</span>Henderson Land Development</span>
+  <span class="client-value">—</span>
+</div>
+<div class="client-row">
+  <span class="client-name"><span class="rank">03</span>Zero Finance</span>
+  <span class="client-value">—</span>
+</div></div>
+</div>
+<div class="detail" id="carat">
+  <div class="detail-hero">
+    <div class="detail-title">
+      <span class="dot big" style="background:#E2F0D9"></span>
+      <div><h3 style="color:#3F6F2D">Carat</h3><small>dentsu</small></div>
+    </div>
+    <div class="detail-count"><b style="color:#3F6F2D">6</b><span>Number of Local Clients</span></div>
+  </div>
+  <div class="client-list"><div class="client-header"><span>Advertiser</span><span>Integrated Spendings</span></div><div class="client-row">
+  <span class="client-name"><span class="rank">01</span>VitaSoy</span>
+  <span class="client-value">—</span>
+</div>
+<div class="client-row">
+  <span class="client-name"><span class="rank">02</span>Cafe de Coral</span>
+  <span class="client-value">—</span>
+</div>
+<div class="client-row">
+  <span class="client-name"><span class="rank">03</span>HK Tourism Board</span>
+  <span class="client-value">—</span>
+</div></div>
+</div>
+<div class="detail" id="starcom">
+  <div class="detail-hero">
+    <div class="detail-title">
+      <span class="dot big" style="background:#FFEADD"></span>
+      <div><h3 style="color:#8C3A13">Starcom</h3><small>Publicis Media</small></div>
+    </div>
+    <div class="detail-count"><b style="color:#8C3A13">5</b><span>Number of Local Clients</span></div>
+  </div>
+  <div class="client-list"><div class="client-header"><span>Advertiser</span><span>Integrated Spendings</span></div><div class="client-row">
+  <span class="client-name"><span class="rank">01</span>Pacific Century Group</span>
+  <span class="client-value">—</span>
+</div>
+<div class="client-row">
+  <span class="client-name"><span class="rank">02</span>SmarTone</span>
+  <span class="client-value">—</span>
+</div>
+<div class="client-row">
+  <span class="client-name"><span class="rank">03</span>HK Mortgage</span>
+  <span class="client-value">—</span>
+</div></div>
+</div>
+<div class="detail" id="havas">
+  <div class="detail-hero">
+    <div class="detail-title">
+      <span class="dot big" style="background:#DCB9FF"></span>
+      <div><h3 style="color:#5B168F">Havas Media</h3><small>Havas</small></div>
+    </div>
+    <div class="detail-count"><b style="color:#5B168F">4</b><span>Number of Local Clients</span></div>
+  </div>
+  <div class="client-list"><div class="client-header"><span>Advertiser</span><span>Integrated Spendings</span></div><div class="client-row">
+  <span class="client-name"><span class="rank">01</span>WeLend</span>
+  <span class="client-value">—</span>
+</div>
+<div class="client-row">
+  <span class="client-name"><span class="rank">02</span>West Kowloon Cultural District</span>
+  <span class="client-value">—</span>
+</div>
+<div class="client-row">
+  <span class="client-name"><span class="rank">03</span>Sino Group</span>
+  <span class="client-value">—</span>
+</div></div>
+</div>
+      <div class="empty">No agency selected. Click one or more rows to display details.</div>
+    </div>
+  </section>
+</main>
+<script>
+(function(){
+  const layout = document.querySelector('.report-interactive');
+  const rows = Array.from(layout.querySelectorAll('tbody tr[data-target]'));
+  const details = Array.from(layout.querySelectorAll('.detail[id]'));
+  const empty = layout.querySelector('.empty');
+
+  function sync(){
+    const active = rows.filter(r => r.classList.contains('active')).map(r => r.dataset.target);
+    details.forEach(d => d.classList.toggle('active', active.includes(d.id)));
+    if(empty) empty.classList.toggle('active', active.length === 0);
+  }
+
+  rows.forEach(row => {
+    row.addEventListener('click', () => {
+      row.classList.toggle('active');
+      sync();
+    });
+  });
+  sync();
+}());
+</script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Share of Exposure · Hong Kong</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F4F6;--ink:#111827;--muted:#6B7280;--line:#E5E7EB;--card:#fff;--accent:#D81B45;
+  --shadow:0 2px 6px rgba(0,0,0,.04),0 14px 34px rgba(15,23,42,.08);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);font-family:'IBM Plex Sans',sans-serif;color:var(--ink);font-size:14px;line-height:1.5}
+.top{position:sticky;top:0;background:#111827;color:white;padding:15px 24px;z-index:10;display:flex;justify-content:space-between;align-items:center}
+.top strong{letter-spacing:.01em}.top button{background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:8px 12px;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:11px}
+.wrap{max-width:1400px;margin:auto;padding:20px 24px 42px}
+.hero{display:flex;justify-content:space-between;gap:28px;align-items:center;margin:0 -8px 24px;padding:30px 34px 28px;background:linear-gradient(135deg,#111827 0%,#5B1732 58%,#D81B45 100%);border-radius:0 0 24px 24px;box-shadow:0 18px 48px rgba(17,24,39,.18);min-height:158px}
+.kicker{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;color:rgba(255,255,255,.72);text-transform:uppercase;margin-bottom:10px}
+h1{font-size:clamp(34px,4.2vw,58px);font-weight:800;color:#fff;line-height:.98;margin:0 0 10px;letter-spacing:-.055em}h1 em{font-style:normal;color:#fff}.sub{color:#FBCFE8;margin:0;font-family:'IBM Plex Mono',monospace;font-size:13px;max-width:760px}
+.hint{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:8px 12px;white-space:nowrap;backdrop-filter:blur(8px)}
+.layout{display:grid;grid-template-columns:minmax(380px,470px) 1fr;gap:18px;align-items:start}
+.panel{background:white;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+.panel-head{padding:18px 20px;border-bottom:1px solid var(--line);background:#F9FAFB}
+.panel-head h2{margin:0;font-size:20px;letter-spacing:-.02em}.panel-head p{margin:5px 0 0;color:var(--muted);font-size:12px}
+table{width:100%;border-collapse:collapse}th{background:#F9FAFB;color:#4B5563;font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}td{padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:middle}tr:last-child td{border-bottom:0}tbody tr{cursor:pointer}tbody tr:hover{background:#F9FAFB}tbody tr.active{background:#FDECEF;box-shadow:inset 5px 0 0 var(--accent)}tbody tr.active .agency-cell:before{content:'✓';display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--accent);color:white;font-family:'IBM Plex Mono';font-size:11px;margin-right:2px}
+th:nth-child(3),td:nth-child(3),th:nth-child(4),td:nth-child(4){text-align:right}.agency-cell{display:flex;align-items:center;gap:10px;font-weight:700}.dot{width:8px;height:28px;border-radius:999px;border:1px solid rgba(0,0,0,.12);display:inline-block;flex:0 0 auto}.dot.big{width:10px;height:42px}.group{display:block;color:var(--muted);font-family:'IBM Plex Mono';font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;margin-top:2px}.num{font-weight:800;font-size:25px;letter-spacing:-.03em}.share-exposure{color:#111827!important;font-family:'IBM Plex Mono',monospace;font-size:21px;font-weight:700;letter-spacing:-.02em}.pts{display:inline-flex;align-items:center;justify-content:center;height:26px;min-width:42px;padding:0 10px;border-radius:999px;font-family:'IBM Plex Mono';font-size:12px;font-weight:700;white-space:nowrap}.pts.top{background:#F5E7A1;color:#6F5600}.pts.mid{background:#DBEAFE;color:#1E3A8A}.pts.none{background:#F3F0E8;color:#8A8578}.chev{color:var(--muted);font-family:'IBM Plex Mono'}
+.detail{display:none}.detail.active{display:block}.detail-hero{padding:24px 26px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px;background:linear-gradient(180deg,#fff,#F8FAFC)}.detail-title{display:flex;align-items:center;gap:14px}.detail-title h3{font-size:33px;line-height:1;margin:0;letter-spacing:-.035em}.detail-title small{display:block;margin-top:4px;font-family:'IBM Plex Mono';font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.detail-count{text-align:right}.detail-count b{display:block;font-size:58px;line-height:.85;letter-spacing:-.06em}.detail-count span{font-size:12px;color:var(--muted)}
+.client-list{padding:12px 24px 24px}.client-header{display:grid;grid-template-columns:1fr 78px 70px;gap:10px;align-items:baseline;padding:10px 4px 8px;border-bottom:1px solid var(--line);color:#4B5563;font-family:'IBM Plex Mono';font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}.client-header span:nth-child(2),.client-header span:nth-child(3){text-align:right}.client-row{display:grid;grid-template-columns:1fr 78px 70px;gap:10px;align-items:baseline;padding:12px 4px;border-bottom:1px solid #EEF2F7}.client-row:last-child{border-bottom:0}.client-name{font-weight:600;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.client-year,.client-value{font-family:'IBM Plex Mono';font-size:12px;text-align:right;color:var(--muted)}.client-value{color:#111827;font-weight:700}.client-row.win .client-name,.client-row.win .client-year{color:var(--accent);font-weight:800}.rank{font-family:'IBM Plex Mono';font-size:10px;color:var(--muted);margin-right:8px}.empty{display:none;padding:36px 22px;text-align:center;color:var(--muted)}.empty.active{display:block}
+.currency-control,.hero-print-btn{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 10px;box-shadow:none;backdrop-filter:blur(8px)}.currency-control label{font-family:'IBM Plex Mono';font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.78);font-weight:700}.currency-control select{border:0;background:transparent;font-family:'IBM Plex Mono';font-size:11px;font-weight:700;color:#fff;outline:none;cursor:pointer}.currency-control select option{color:#111827}.hero-print-btn{color:#fff;cursor:pointer;font-family:'IBM Plex Mono';font-size:11px;font-weight:700}.hero-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+@media(max-width:960px){.hero{display:block;padding:30px 24px 28px}.hint{display:inline-block;margin-top:16px}.hero-actions{justify-content:flex-start;margin-top:20px}.layout{grid-template-columns:1fr}}
+@media print{.hint,.hero-print-btn{display:none}.layout{display:block}.panel{box-shadow:none;margin-bottom:14px}.detail{display:block!important;break-inside:avoid}.empty{display:none!important}tr{break-inside:avoid}@page{size:A4 landscape;margin:12mm}}
+</style>
+<style id="structure-blue-theme">:root{--accent:#2563EB}.hero{background:linear-gradient(135deg,#111827 0%,#1E3A5F 62%,#2563EB 100%)!important}.sub{color:#DBEAFE!important}tbody tr.active{background:#EFF6FF!important}</style>
+</head>
+<body>
+<main class="wrap">
+  <section class="hero">
+    <div><div class="kicker">RECMA · Hong Kong · Qualitative Evaluation</div><h1><em>Share of Exposure</em></h1><p class="sub">Hong Kong · Lower exposure share indicates healthier client balance.</p></div>
+    <div class="hero-actions">
+      <div class="currency-control">
+        <label for="currencySelect">Currency</label>
+        <select id="currencySelect" aria-label="Select currency">
+          <option value="USD">USD $</option>
+          <option value="EUR">EUR €</option>
+          <option value="IDR">IDR Rp</option>
+          <option value="JPY">JPY ¥</option>
+          <option value="GBP">GBP £</option>
+        </select>
+      </div>
+      <button class="hero-print-btn" type="button" onclick="window.print()">Print / PDF</button>
+      <div class="hint">Click agencies to select / deselect</div>
+    </div>
+  </section>
+  <section class="layout report-interactive">
+    <div class="panel">
+      <div class="panel-head"><h2>Agency ranking</h2><p>Multi-selection enabled.</p></div>
+      <table><thead><tr><th>#</th><th>Agency</th><th>Share of Exposure&nbsp;%</th><th>RECMA Points</th><th></th></tr></thead><tbody>
+<tr class="active" data-target="havas">
+  <td>1</td>
+  <td><span class="agency-cell"><span class="dot" style="background:#DCB9FF"></span><span>Havas Media<span class="group">Havas</span></span></span></td>
+  <td class="num share-exposure">22%</td>
+  <td><span class="pts top">2 pts</span></td>
+  <td class="chev">›</td>
+</tr>
+<tr class="" data-target="phd">
+  <td>2</td>
+  <td><span class="agency-cell"><span class="dot" style="background:#FFE699"></span><span>PHD<span class="group">Omnicom Media</span></span></span></td>
+  <td class="num share-exposure">26%</td>
+  <td><span class="pts top">2 pts</span></td>
+  <td class="chev">›</td>
+</tr>
+<tr class="" data-target="zenith">
+  <td>3</td>
+  <td><span class="agency-cell"><span class="dot" style="background:#FFEADD"></span><span>Zenith<span class="group">Publicis Media</span></span></span></td>
+  <td class="num share-exposure">30%</td>
+  <td><span class="pts mid">1 pt</span></td>
+  <td class="chev">›</td>
+</tr>
+<tr class="" data-target="carat">
+  <td>4</td>
+  <td><span class="agency-cell"><span class="dot" style="background:#E2F0D9"></span><span>Carat<span class="group">dentsu</span></span></span></td>
+  <td class="num share-exposure">30%</td>
+  <td><span class="pts mid">1 pt</span></td>
+  <td class="chev">›</td>
+</tr>
+<tr class="" data-target="omd">
+  <td>5</td>
+  <td><span class="agency-cell"><span class="dot" style="background:#FFE699"></span><span>OMD<span class="group">Omnicom Media</span></span></span></td>
+  <td class="num share-exposure">32%</td>
+  <td><span class="pts mid">1 pt</span></td>
+  <td class="chev">›</td>
+</tr></tbody></table>
+    </div>
+    <div class="panel">
+      
+<div class="detail active" id="havas">
+  <div class="detail-hero">
+    <div class="detail-title">
+      <span class="dot big" style="background:#DCB9FF"></span>
+      <div><h3 style="color:#5B168F">Havas Media</h3><small>Havas</small></div>
+    </div>
+    <div class="detail-count"><b style="color:#5B168F">22%</b><span>Share of Exposure</span></div>
+  </div>
+  <div class="client-list"><div class="client-header"><span>Advertiser</span><span>Share&nbsp;%</span><span>Integrated Spendings</span></div><div class="client-row">
+  <span class="client-name"><span class="rank">01</span>Shell</span>
+  <span class="client-year">9%</span>
+  <span class="client-value" data-base-value="14">14</span>
+</div>
+<div class="client-row">
+  <span class="client-name"><span class="rank">02</span>Viatris</span>
+  <span class="client-year">6%</span>
+  <span class="client-value" data-base-value="10">10</span>
+</div>
+<div class="client-row">
+  <span class="client-name"><span class="rank">03</span>InChape</span>
+  <span class="client-year">6%</span>
+  <span class="client-value" data-base-value="10">10</span>
+</div></div>
+</div>
+<div class="detail" id="phd">
+  <div class="detail-hero">
+    <div class="detail-title">
+      <span class="dot big" style="background:#FFE699"></span>
+      <div><h3 style="color:#5F4500">PHD</h3><small>Omnicom Media</small></div>
+    </div>
+    <div class="detail-count"><b style="color:#5F4500">26%</b><span>Share of Exposure</span></div>
+  </div>
+  <div class="client-list"><div class="client-header"><span>Advertiser</span><span>Share&nbsp;%</span><span>Integrated Spendings</span></div><div class="client-row">
+  <span class="client-name"><span class="rank">01</span>HSBC</span>
+  <span class="client-year">15%</span>
+  <span class="client-value" data-base-value="45">45</span>
+</div>
+<div class="client-row">
+  <span class="client-name"><span class="rank">02</span>Cafe de Coral</span>
+  <span class="client-year">6%</span>
+  <span class="client-value" data-base-value="17">17</span>
+</div>
+<div class="client-row">
+  <span class="client-name"><span class="rank">03</span>Reckitt</span>
+  <span class="client-year">5%</span>
+  <span class="client-value" data-base-value="16">16</span>
+</div></div>
+</div>
+<div class="detail" id="zenith">
+  <div class="detail-hero">
+    <div class="detail-title">
+      <span class="dot big" style="background:#FFEADD"></span>
+      <div><h3 style="color:#8C3A13">Zenith</h3><small>Publicis Media</small></div>
+    </div>
+    <div class="detail-count"><b style="color:#8C3A13">30%</b><span>Share of Exposure</span></div>
+  </div>
+  <div class="client-list"><div class="client-header"><span>Advertiser</span><span>Share&nbsp;%</span><span>Integrated Spendings</span></div><div class="client-row">
+  <span class="client-name"><span class="rank">01</span>GSK</span>
+  <span class="client-year">11%</span>
+  <span class="client-value" data-base-value="30">30</span>
+</div>
+<div class="client-row">
+  <span class="client-name"><span class="rank">02</span>AIA</span>
+  <span class="client-year">11%</span>
+  <span class="client-value" data-base-value="30">30</span>
+</div>
+<div class="client-row">
+  <span class="client-name"><span class="rank">03</span>Deliveroo</span>
+  <span class="client-year">8%</span>
+  <span class="client-value" data-base-value="24">24</span>
+</div></div>
+</div>
+<div class="detail" id="carat">
+  <div class="detail-hero">
+    <div class="detail-title">
+      <span class="dot big" style="background:#E2F0D9"></span>
+      <div><h3 style="color:#3F6F2D">Carat</h3><small>dentsu</small></div>
+    </div>
+    <div class="detail-count"><b style="color:#3F6F2D">30%</b><span>Share of Exposure</span></div>
+  </div>
+  <div class="client-list"><div class="client-header"><span>Advertiser</span><span>Share&nbsp;%</span><span>Integrated Spendings</span></div><div class="client-row">
+  <span class="client-name"><span class="rank">01</span>Standard Chartered Bank</span>
+  <span class="client-year">13%</span>
+  <span class="client-value" data-base-value="27.5">27.5</span>
+</div>
+<div class="client-row">
+  <span class="client-name"><span class="rank">02</span>Cafe de Coral</span>
+  <span class="client-year">10%</span>
+  <span class="client-value" data-base-value="22">22</span>
+</div>
+<div class="client-row">
+  <span class="client-name"><span class="rank">03</span>FoodPanda</span>
+  <span class="client-year">7%</span>
+  <span class="client-value" data-base-value="16">16</span>
+</div></div>
+</div>
+<div class="detail" id="omd">
+  <div class="detail-hero">
+    <div class="detail-title">
+      <span class="dot big" style="background:#FFE699"></span>
+      <div><h3 style="color:#5F4500">OMD</h3><small>Omnicom Media</small></div>
+    </div>
+    <div class="detail-count"><b style="color:#5F4500">32%</b><span>Share of Exposure</span></div>
+  </div>
+  <div class="client-list"><div class="client-header"><span>Advertiser</span><span>Share&nbsp;%</span><span>Integrated Spendings</span></div><div class="client-row">
+  <span class="client-name"><span class="rank">01</span>Vita Green</span>
+  <span class="client-year">16%</span>
+  <span class="client-value" data-base-value="57">57</span>
+</div>
+<div class="client-row">
+  <span class="client-name"><span class="rank">02</span>Dairy Farm</span>
+  <span class="client-year">9%</span>
+  <span class="client-value" data-base-value="33">33</span>
+</div>
+<div class="client-row">
+  <span class="client-name"><span class="rank">03</span>McDonald's</span>
+  <span class="client-year">6%</span>
+  <span class="client-value" data-base-value="22">22</span>
+</div></div>
+</div>
+      <div class="empty">No agency selected. Click one or more rows to display details.</div>
+    </div>
+  </section>
+</main>
+<script>
+(function(){
+  const layout = document.querySelector('.report-interactive');
+  const rows = Array.from(layout.querySelectorAll('tbody tr[data-target]'));
+  const details = Array.from(layout.querySelectorAll('.detail[id]'));
+  const empty = layout.querySelector('.empty');
+  const currencySelect = document.getElementById('currencySelect');
+  const currencyRates = {
+    USD: {rate: 1, symbol: '$', suffix: 'm'},
+    EUR: {rate: 0.92, symbol: '€', suffix: 'm'},
+    IDR: {rate: 16200, symbol: 'Rp', suffix: 'm'},
+    JPY: {rate: 155, symbol: '¥', suffix: 'm'},
+    GBP: {rate: 0.79, symbol: '£', suffix: 'm'}
+  };
+
+  function formatCurrency(value, currency){
+    const settings = currencyRates[currency] || currencyRates.USD;
+    const converted = Number(value) * settings.rate;
+    const decimals = currency === 'IDR' || currency === 'JPY' ? 0 : (converted >= 10 ? 0 : 1);
+    return settings.symbol + converted.toLocaleString('en-US', {maximumFractionDigits: decimals, minimumFractionDigits: decimals}) + settings.suffix;
+  }
+
+  function updateCurrency(){
+    const currency = currencySelect ? currencySelect.value : 'USD';
+    layout.querySelectorAll('.client-value[data-base-value]').forEach(cell => {
+      const baseValue = parseFloat(cell.dataset.baseValue);
+      if(!Number.isNaN(baseValue)) cell.textContent = formatCurrency(baseValue, currency);
+    });
+    layout.querySelectorAll('.client-header span:nth-child(3)').forEach(header => {
+      const settings = currencyRates[currency] || currencyRates.USD;
+      header.textContent = 'Integrated Spendings (' + currency + ')';
+    });
+  }
+
+  function sync(){
+    const active = rows.filter(r => r.classList.contains('active')).map(r => r.dataset.target);
+    details.forEach(d => d.classList.toggle('active', active.includes(d.id)));
+    if(empty) empty.classList.toggle('active', active.length === 0);
+  }
+
+  rows.forEach(row => {
+    row.addEventListener('click', () => {
+      row.classList.toggle('active');
+      sync();
+    });
+  });
+  if(currencySelect) currencySelect.addEventListener('change', updateCurrency);
+  sync();
+  updateCurrency();
+}());
+</script>
+</body>
+</html>

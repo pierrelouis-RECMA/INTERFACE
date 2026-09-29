@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Activity Growth over 3 years - Hong Kong</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F4F6;--ink:#111827;--muted:#6B7280;--line:#E5E7EB;--accent:#D81B45;--shadow:0 2px 6px rgba(0,0,0,.04),0 14px 34px rgba(15,23,42,.08)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:'IBM Plex Sans',sans-serif;color:var(--ink);font-size:14px;line-height:1.5}
+.wrap{max-width:1320px;margin:auto;padding:20px 24px 42px}
+.report-hero{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;margin:0 0 18px;padding:24px 28px;background:linear-gradient(135deg,#111827 0%,#5B1732 58%,#D81B45 100%);border-radius:18px;box-shadow:0 16px 42px rgba(17,24,39,.16);color:#fff}
+.kicker{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-bottom:8px}
+h1{font-size:clamp(30px,4vw,52px);line-height:1;margin:0 0 8px;letter-spacing:-.045em}
+.sub{margin:0;color:#FCE7F3;font-family:'IBM Plex Mono',monospace;font-size:12px}.badge{display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.13);border-radius:999px;padding:8px 12px;font-family:'IBM Plex Mono',monospace;font-size:11px;white-space:nowrap}
+.panel{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+.panel-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-end;padding:16px 18px;border-bottom:1px solid var(--line);background:#F9FAFB}
+.panel-head h2{margin:0;font-size:19px;letter-spacing:-.02em}.panel-head p{margin:4px 0 0;color:var(--muted);font-size:12px}
+.legend{display:flex;gap:8px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#4B5563}.legend span{border:1px solid #E5E7EB;border-radius:999px;padding:5px 8px;background:#fff}
+.table-wrap{overflow:auto}table{width:100%;min-width:960px;border-collapse:collapse}th{background:#F9FAFB;color:#4B5563;font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);white-space:nowrap}td{padding:13px 14px;border-bottom:1px solid #EEF2F7;vertical-align:middle}tbody tr:last-child td{border-bottom:0}tbody tr:hover{background:#F9FAFB}
+th:nth-child(n+3),td:nth-child(n+3){text-align:right}.agency-cell{display:flex;align-items:center;gap:10px;font-weight:800}.dot{width:8px;height:28px;border-radius:999px;border:1px solid rgba(0,0,0,.12);display:inline-block;flex:0 0 auto}.group{display:block;color:var(--muted);font-family:'IBM Plex Mono';font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;margin-top:2px}.rank{font-family:'IBM Plex Mono';font-weight:700;color:#4B5563}.num{font-family:'IBM Plex Mono';font-weight:800}.num.pos{color:#15803D}.num.neg{color:#B91C1C}.growth{font-weight:900;font-size:18px}.growth.pos{color:#15803D}.growth.neg{color:#B91C1C}.you-row{background:#FFF7FA;box-shadow:inset 5px 0 0 #D81B45}
+.note{padding:14px 18px;border-top:1px solid var(--line);color:#6B7280;font-size:12px;background:#FCFCFD}
+@media(max-width:760px){.wrap{padding:14px}.report-hero,.panel-head{display:block}.badge{margin-top:14px}}
+</style>
+<style id="vitality-green-theme">:root{--accent:#16A34A}.hero,.report-hero{background:linear-gradient(135deg,#0F2A1C 0%,#166534 62%,#16A34A 100%)!important}.sub,.report-sub{color:#DCFCE7!important}tbody tr.active{background:#F0FDF4!important}</style>
+</head>
+<body>
+<main class="wrap">
+  <section class="report-hero">
+    <div>
+      <div class="kicker">RECMA - Hong Kong - Qualitative Evaluation</div>
+      <h1>Activity Growth over 3 years</h1>
+      <p class="sub">T6a - 3-year activity growth, RECMA restricted report</p>
+    </div>
+    <div class="badge">12 agencies - $2,318m overall activity</div>
+  </section>
+  <section class="panel">
+    <div class="panel-head">
+      <div>
+        <h2>Agency ranking</h2>
+        <p>By decreasing order of 3-year activity growth.</p>
+      </div>
+      <div class="legend">
+        <span>Growth = 3-year overall activity growth</span>
+        <span>Values in USD m</span>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:70px">Rank</th>
+            <th>Agency</th>
+            <th>3-year Growth</th>
+            <th>Activity 2022</th>
+            <th>Growth 22/21</th>
+            <th>Activity 2021</th>
+            <th>Growth 21/20</th>
+            <th>Activity 2020</th>
+            <th>Growth 20/19</th>
+            <th>Activity 2019</th>
+          </tr>
+        </thead>
+        <tbody id="activityRows"></tbody>
+      </table>
+    </div>
+    <div class="note">Source: RECMA restricted HK T6a, March 2026. Overall market growth is +23% over the same 3-year period.</div>
+  </section>
+</main>
+<script>
+const ACTIVITY_DATA=[
+  {rank:'1',agency:'EssenceMediacom',group:'WPP Media',color:'#FFE4FF',growth:111,g22:0,g21:90,g20:11,a22:188,a21:188,a20:99,a19:99},
+  {rank:'2',agency:'Havas Media',group:'Havas Media Network',color:'#DCB9FF',growth:69,g22:30,g21:30,g20:0,a22:102,a21:79,a20:61,a19:55,you:true},
+  {rank:'3',agency:'dentsu X',group:'dentsu',color:'#E2F0D9',growth:56,g22:0,g21:42,g20:10,a22:164,a21:164,a20:116,a19:95},
+  {rank:'4',agency:'PHD',group:'Omnicom Media',color:'#FFE699',growth:47,g22:25,g21:5,g20:12,a22:287,a21:229,a20:218,a19:170},
+  {rank:'5',agency:'iProspect',group:'dentsu',color:'#E2F0D9',growth:40,g22:30,g21:8,g20:0,a22:59,a21:45,a20:42,a19:32},
+  {rank:'6=',agency:'Zenith',group:'Publicis Media',color:'#FFEADD',growth:29,g22:15,g21:25,g20:-10,a22:206,a21:179,a20:143,a19:156},
+  {rank:'6=',agency:'Starcom incl. Spark',group:'Publicis Media',color:'#FFEADD',growth:29,g22:8,g21:40,g20:-15,a22:234,a21:216,a20:154,a19:158},
+  {rank:'8',agency:'UM incl. Initiative',group:'Omnicom Media',color:'#FFE699',growth:25,g22:2,g21:10,g20:11,a22:136,a21:133,a20:121,a19:104},
+  {rank:'9',agency:'Carat',group:'dentsu',color:'#E2F0D9',growth:20,g22:-10,g21:25,g20:7,a22:293,a21:325,a20:260,a19:210},
+  {rank:'10',agency:'OMD',group:'Omnicom Media',color:'#FFE699',growth:7,g22:3,g21:4,g20:0,a22:283,a21:275,a20:264,a19:203},
+  {rank:'11',agency:'Mindshare',group:'WPP Media',color:'#FFE4FF',growth:-8,g22:13,g21:16,g20:-30,a22:184,a21:162,a20:140,a19:222},
+  {rank:'12',agency:'Wavemaker',group:'WPP Media',color:'#FFE4FF',growth:-20,g22:-2,g21:0,g20:-18,a22:183,a21:187,a20:187,a19:228}
+];
+function pct(value){
+  return '<span class="num '+(value<0?'neg':'pos')+'">'+(value>0?'+':'')+value+'%</span>';
+}
+function fmt(value){
+  return Number(value).toLocaleString('en-US');
+}
+document.getElementById('activityRows').innerHTML=ACTIVITY_DATA.map(row=>`
+<tr class="${row.you?'you-row':''}">
+  <td><span class="rank">${row.rank}</span></td>
+  <td><span class="agency-cell"><span class="dot" style="background:${row.color}"></span><span>${row.agency}<span class="group">${row.group}</span></span></span></td>
+  <td><span class="growth ${row.growth<0?'neg':'pos'}">${row.growth>0?'+':''}${row.growth}%</span></td>
+  <td><span class="num">$${fmt(row.a22)}m</span></td>
+  <td>${pct(row.g22)}</td>
+  <td><span class="num">$${fmt(row.a21)}m</span></td>
+  <td>${pct(row.g21)}</td>
+  <td><span class="num">$${fmt(row.a20)}m</span></td>
+  <td>${pct(row.g20)}</td>
+  <td><span class="num">$${fmt(row.a19)}m</span></td>
+</tr>`).join('');
+</script>
+</body>
+</html>

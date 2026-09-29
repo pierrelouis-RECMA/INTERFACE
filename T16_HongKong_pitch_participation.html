@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pitch Participation - Hong Kong</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F4F6;--ink:#111827;--muted:#6B7280;--line:#E5E7EB;--card:#fff;--accent:#D81B45;--shadow:0 2px 6px rgba(0,0,0,.04),0 14px 34px rgba(15,23,42,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);font-family:'IBM Plex Sans',sans-serif;color:var(--ink);font-size:14px;line-height:1.5}
+.wrap{max-width:1400px;margin:auto;padding:20px 24px 42px}
+.hero{display:flex;justify-content:space-between;gap:28px;align-items:center;margin:0 -8px 24px;padding:30px 34px 28px;background:linear-gradient(135deg,#111827 0%,#5B1732 58%,#D81B45 100%);border-radius:0 0 24px 24px;box-shadow:0 18px 48px rgba(17,24,39,.18);min-height:158px}
+.kicker{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;color:rgba(255,255,255,.72);text-transform:uppercase;margin-bottom:10px}
+h1{font-size:clamp(34px,4.2vw,58px);font-weight:800;color:#fff;line-height:.98;margin:0 0 10px;letter-spacing:-.055em}.sub{color:#FBCFE8;margin:0;font-family:'IBM Plex Mono',monospace;font-size:13px;max-width:760px}
+.hint,.hero-print-btn{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:8px 12px;white-space:nowrap;backdrop-filter:blur(8px)}.hero-print-btn{cursor:pointer}
+.layout{display:grid;grid-template-columns:minmax(430px,520px) 1fr;gap:18px;align-items:start}.panel{background:white;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}.panel-head{padding:18px 20px;border-bottom:1px solid var(--line);background:#F9FAFB}.panel-head h2{margin:0;font-size:20px;letter-spacing:-.02em}.panel-head p{margin:5px 0 0;color:var(--muted);font-size:12px}
+table{width:100%;border-collapse:collapse}th{background:#F9FAFB;color:#4B5563;font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;text-align:left;padding:12px 13px;border-bottom:1px solid var(--line)}td{padding:12px 13px;border-bottom:1px solid var(--line);vertical-align:middle}tr:last-child td{border-bottom:0}tbody tr{cursor:pointer}tbody tr:hover{background:#F9FAFB}tbody tr.active{background:#FDECEF;box-shadow:inset 5px 0 0 var(--accent)}tbody tr.active .agency-cell:before{content:'✓';display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--accent);color:white;font-family:'IBM Plex Mono';font-size:11px;margin-right:2px}
+th:nth-child(n+3),td:nth-child(n+3){text-align:right}.agency-cell{display:flex;align-items:center;gap:10px;font-weight:800}.dot{width:8px;height:28px;border-radius:999px;border:1px solid rgba(0,0,0,.12);display:inline-block;flex:0 0 auto}.dot.big{width:10px;height:42px}.group{display:block;color:var(--muted);font-family:'IBM Plex Mono';font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;margin-top:2px}.num{font-weight:900;font-size:25px;letter-spacing:-.03em}.year-cell{font-family:'IBM Plex Mono';font-weight:700;color:#4B5563}.chev{color:var(--muted);font-family:'IBM Plex Mono'}
+.detail{display:none}.detail.active{display:block}.detail-hero{padding:24px 26px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px;background:linear-gradient(180deg,#fff,#F8FAFC)}.detail-title{display:flex;align-items:center;gap:14px}.detail-title h3{font-size:33px;line-height:1;margin:0;letter-spacing:-.035em}.detail-title small{display:block;margin-top:4px;font-family:'IBM Plex Mono';font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.detail-count{text-align:right}.detail-count b{display:block;font-size:58px;line-height:.85;letter-spacing:-.06em}.detail-count span{font-size:12px;color:var(--muted)}
+.year-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:16px 24px;border-bottom:1px solid var(--line);background:#FCFCFD}.year-box{border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:#fff}.year-box span{display:block;font-family:'IBM Plex Mono';font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.year-box b{display:block;font-size:24px;line-height:1;margin-top:3px}
+.detail-body{display:grid;grid-template-columns:1fr 1fr;gap:0}.pitch-section{padding:18px 22px 24px}.pitch-section+.pitch-section{border-left:1px solid var(--line)}.pitch-section h4{margin:0 0 12px;font-size:13px;text-transform:uppercase;letter-spacing:.08em;font-family:'IBM Plex Mono';color:#4B5563}.pitch-list{display:flex;flex-wrap:wrap;gap:8px}.pitch-chip{border:1px solid #E5E7EB;background:#fff;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:650;color:#111827}.pitch-chip.loss{background:#FFF7F8;color:#8B1D3B;border-color:#F5C2D0}.pitch-chip.ret{background:#F8FAFC;color:#374151}.empty{display:none;padding:36px 22px;text-align:center;color:var(--muted)}.empty.active{display:block}
+@media(max-width:1080px){.layout{grid-template-columns:1fr}.hero{display:block;padding:30px 24px 28px}.hint{display:inline-block;margin-top:16px}.detail-body{grid-template-columns:1fr}.pitch-section+.pitch-section{border-left:0;border-top:1px solid var(--line)}}
+@media print{.hint,.hero-print-btn{display:none}.layout{display:block}.panel{box-shadow:none;margin-bottom:14px}.detail{display:block!important;break-inside:avoid}.empty{display:none!important}tr{break-inside:avoid}@page{size:A4 landscape;margin:12mm}}
+</style>
+<style id="vitality-green-theme">:root{--accent:#16A34A}.hero,.report-hero{background:linear-gradient(135deg,#0F2A1C 0%,#166534 62%,#16A34A 100%)!important}.sub,.report-sub{color:#DCFCE7!important}tbody tr.active{background:#F0FDF4!important}</style>
+</head>
+<body>
+<main class="wrap">
+  <section class="hero">
+    <div><div class="kicker">RECMA - Hong Kong - Qualitative Evaluation</div><h1>Pitch Participation</h1><p class="sub">T16B - New business participation, 2023 to 2025</p></div>
+    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end">
+      <button class="hero-print-btn" type="button" onclick="window.print()">Print / PDF</button>
+      <div class="hint">Click agencies to select / deselect</div>
+    </div>
+  </section>
+  <section class="layout report-interactive">
+    <div class="panel">
+      <div class="panel-head"><h2>Agency ranking</h2><p>Ranking by total pitch participations over 3 years.</p></div>
+      <table><thead><tr><th>#</th><th>Agency</th><th>Total</th><th>2023</th><th>2024</th><th>2025</th><th></th></tr></thead><tbody id="pitchRanking"></tbody></table>
+    </div>
+    <div class="panel" id="pitchDetails"></div>
+  </section>
+</main>
+<script>
+const PITCH_DATA=[
+  {id:'omd',rank:'1',agency:'OMD',group:'Omnicom Media',color:'#FFE699',ink:'#5F4500',total:81,years:[11,31,39],active:true,won:['Barclays UK','Helloworld Online Education','HKTDC','Sony Pictures Entertainment Inc.','Standard Chartered','V Credit','Vans','Charlotte Tilbury Beauty HK','Taobao','Octopus retention','Tatler','Sony Pictures Entertainment Inc.','West Kowloon Culture District','Maxim&apos;s','Zero Finance','Surplus King Centre Limited','UnionPay','Prudential Wealth','iNova Pharmaceutical','China Resources Land','HK University','Tsing Tao Beer','Golden Resources'],lost:['Chow Tai Fook departure','Estee Lauder departure','Nestle departure','Grand Lisboa Palace departure','Swire departure','Wyeth departure','Great Eagle Property departure','AIA','Wheelock Property departure','Lindt departure','CLP Power','Bosch departure','eMPF PC','Charlotte Tilbury departure','FedEx SEM','Suntory Wellness departure','FrieslandCampina','HK01','Qantas & Jet Star','Blue Insurance','Genki Sushi','Audemars Piguet','Sunwa','HK Science & Technology Park','Vervain Resources Ltd.','HKMC Annuity','China Life','Hong Kong International Airport','Hong Kong Disneyland','HONOR','Y.C. Woo & Co. / ZP Health - Goldboss','Kenvue','Bayer','Lam Soon - Knife Brand','CMB Wing Lung Bank','CSOP Asset Management','CUHK - Global Branding','DFI - GNC','Uniqlo','DFI Manning - China Tourist','Financial Services Development Council','Webull Securities Limited']},
+  {id:'havas',rank:'2',agency:'Havas Media',group:'Havas Media Network',color:'#DCB9FF',ink:'#6B2FA6',total:61,years:[7,29,25],won:['Inchcape','Sunlife','Venetian Cotai','Alibaba International Social','Tai Kwun','HK Jockey Club digital','All media + Social','Emma Sleep','Lululemon social retention','Pure Yoga Social','LIV Golf APAC','VHIS digital','Lululemon','West Kowloon Cultural Social media','Shiseido retention','AIA retention','Far East Hospitality retention','Mediacorp retention','Blue Vista HK','L&apos;ECOLE - Richemont','Hong Kong Golf Club','South China Morning Post','Hospital Authority eHealth'],lost:['HKMC Annuity departure','UnionPay departure','Sun Life departure','AEON','Lululemon media departure','AliExpress','Audemars Piguet departure','Bank of China','Agoda','Citybus','Carousell','CLP','FoodPanda','HK International Airport','JP Morgan','HK Mortgage Corporation','Keeta','HKMC Annuity','DFI','Chow Tai Fook','HKMCA','Huawei','HKMU','Ocean Park','HKTVMall','Octopus','IFEC','HKUSAT','Johnson & Johnson','eMPF','Langham Hotels Global','FSDC','Merlin Entertainment','HKEX','Shangri-La Hotels','Trip.com','Webull','Bank of China']},
+  {id:'mindshare',rank:'3',agency:'Mindshare',group:'WPP Media',color:'#FFE4FF',ink:'#7A237A',total:54,years:[21,26,7],won:['Allianz','Melco Resorts & Entertainment','Yili Group','HK Tennis Open','Sogo Department Store','Link REIT','Manulife Financial','Meituan','BYD','Melco','Lululemon','Nam Fung Group','WeLend retention','PCCW','Airport Authority HK retention','Prada Miu Miu retention','Prudential retention','YF Life retention','Sunwa','Tiger Brokers','ZA Bank'],lost:['Foodpanda departure','Pacific Century Group departure','iNova Pharmaceutical departure','HK Tourism Board departure','Dah Sing Group departure','SUNWA departure','UNHCR departure','PepsiCo departure','Prudential Wealth Management departure','FWD Insurance departure','Hysan departure','Ka Wah International departure','HSBC','Alipay HK departure','Advance Pharmaceutical departure','Brand HK','Wai Yuen Tong Medicine departure','Tsing Tao Beer departure','DFI','Henderson Land Development departure','Kellanova departure','KFC','City Chain departure','Alibaba TaoBao Tmall departure']},
+  {id:'zenith',rank:'4',agency:'Zenith',group:'Publicis Media',color:'#FFEADD',ink:'#8C3A13',total:40,years:[16,12,12],won:['AIA','Carlsberg','Fortnum & Mason','FWD Insurance','Great Eagle','Inchcape Pic - Project','Lovestruck.com','Estee Lauder retention','BBK Electronics OnePlus','BBK Electronics Oppo','Apoidea','HK Economic Journal & Market Digest','Korean Air','Four Seasons','Kenvue','Bank of China','China Mobile International','TCL','Dyson','Wheelock Property','Bosch Siemens Hausgerate','BRITA','Kerry Properties','Ka Wah International','Sinoland Hotels','Walt Disney HK & China retention','Western Union','Mars'],lost:['Generali departure','Hang Seng Bank departure','Bank of China departure','Airport Authority Hong Kong','KFC departure','Walt Disney departure','Honor','Pizza Hut / PHD departure','Hong Kong Jockey Club','Pernod Ricard','MTR','Sunlife']},
+  {id:'phd',rank:'5',agency:'PHD',group:'Omnicom Media',color:'#FFE699',ink:'#5F4500',total:38,years:[14,13,11],won:['Bolttech Insurance','Marco Polo Hongkong Hotel','Gateway Hotel','Mox Bank','One Degree','Zero Fintech retention','Rakuten','China CITIC Bank retention','ChinaChem Group retention','Singapore Airlines Ltd.','HSBC retention','Link Asset Management retention','University of Hong Kong retention','Wharf Real Estate offline retention','Adrien Gagnon','Lane Crawford Joyce Group','Ctrip','Winamax','Kavli','Bausch & Lomb','Dah Sing Group','Telford Beer','CK Hutchison Holdings','Rohto Pharma','WeChat Pay HK','Jung Kwun Jang','JD.com','Korea Ginseng','SaSa Cosmetic','HKTV Mall','Saving International - Clever','OMUSUBI'],lost:['Sunlife departure','Vitasoy departure','Vitasoy departure','China Construction Bank departure','MPFA','Friso','Kerry Property']},
+  {id:'starcom',rank:'6',agency:'Starcom',group:'Publicis Media',color:'#FFEADD',ink:'#8C3A13',total:36,years:[9,14,13],won:['Pacific Century Group','Lindt','Uniqlo retention','UNHCR','FT Life','Bank of America','PepsiCo','EssilorLuxottica','The Future Rocks Company Limited','Hong Kong Mortgage Corporation retention','FrieslandCampina','Mandatory Provident Fund Schemes Authority MPF','Paramount Pictures','Paypal','FrieslandCampina retention','Royal Caribbean retention','Shangri-La Hotels Group','Ubisoft'],lost:['Mox Bank departure','Vitasoy','Axa departure','Hong Kong Tourism Board','Lane Crawford','DiDi','New Balance','Duty Free International','Octopus Card','West Kowloon Cultural District Authority','WeLab Bank','WeLend']},
+  {id:'um',rank:'7',agency:'UM incl. Initiative',group:'Omnicom Media',color:'#FFE699',ink:'#5F4500',total:34,years:[19,9,6],won:['New Balance','Oatside','General Mills','YF Life','Sunwa','Chow Tai Fook digital','Atlantis Sanya','Hung&apos;s Food Group','Credit Gain','Huatai Warrants','Alibaba digital','Peninsula','Arctic Vision iTear','West Kowloon retention','OSIM','Bank of China','Octopus digital','Audemars Piguet','GU'],lost:['Bank of China departure','Mandatory Provident Fund MPF departure','Shangri-La Hotels departure','AS Watsons Group','Brand HK departure','Uniqlo','eMPF departure','Taobao','HK Metropolitan U departure','MaxMara departure','WeChat Pay departure','Western Union Financial S. departure','HKMC','Tencent']},
+  {id:'em',rank:'8',agency:'EssenceMediacom',group:'WPP Media',color:'#FFE4FF',ink:'#7A237A',total:24,years:[5,13,6],won:['Ocean Park','Hang Seng Bank','WEBULL','IFC Mall','FUTU Securities International','Swire Bottler','Zero Finance offline','The Garden Co. Ltd','Peak Tramway HK','Fortune Pharmaceutical','APC Pharmaceuticals','The Hongkong and Shanghai Hotels Ltd','Tiger Brokers','United Family Healthcare','Uber retention','Endowus','Maus Freres Holding'],lost:['Pandora departure','WeChat Pay HK departure','AIA departure','Mox Bank','FWD Life Insurance Corp.','Uniqlo','Jolibee']},
+  {id:'wavemaker',rank:'9',agency:'Wavemaker',group:'WPP Media',color:'#FFE4FF',ink:'#7A237A',total:17,years:[3,10,4],won:['OCBC','Gin Hung','Pernod Ricard','Reolink','AllianceBernstein','Honor retention','EcoFlow','DBS Bank retention','Huawei','Axa','Sun Life'],lost:['Melco departure','FrieslandCampina departure','Jebsen Beverage departure','Carlsberg','Swatch Group departure','Saving International - Clever departure']},
+  {id:'carat',rank:'10',agency:'Carat',group:'dentsu',color:'#E2F0D9',ink:'#3F6F2D',total:14,years:[8,2,4],won:['Foodpanda','Pandora','Hong Kong Tourism Board','Hong Kong Metropolitan U.','Swatch Group','Swire Property Group','Vitasoy','SJM Resorts'],lost:['YF Life departure','AS Watson departure','DFI','The Garden Co departure','Allianz departure','Maus Freres Holding departure']},
+  {id:'hearts',rank:'11',agency:'Hearts & Science',group:'Omnicom Media',color:'#FFE699',ink:'#5F4500',total:11,years:[0,2,9],won:['China Construction Bank Asia transfer','Baush & Lomb','Warner Brothers Discovery','Charlotte Tilbury transfer','CocaCola eShop','Blue Insurance','Advance Pharmaceutical Co. Ltd','Mox Bank','AS Watson'],lost:['Blue Vista departure','Club Med']},
+  {id:'dentsux',rank:'12=',agency:'dentsu X',group:'dentsu',color:'#E2F0D9',ink:'#3F6F2D',total:9,years:[4,2,3],won:['Ocean Park - Dry Park & WaterWorld retention','Prada','Telford','Generali','Wai Yuen Tong Medicine Co. Ltd','Suntory Wellness'],lost:['Fast Retailing departure','Kerry Properties departure','Peak Tramway departure']},
+  {id:'spark',rank:'12=',agency:'Spark Foundry',group:'Publicis Media',color:'#FFEADD',ink:'#8C3A13',total:9,years:[3,2,4],won:['HKMC Annuity','Miele','Wyeth Nutrition','Kenvue','Estee Lauder','Nestle','Jebsen Beverage Co. Ltd'],lost:['Longchamp departure','HKMC Annuity departure']},
+  {id:'iprospect',rank:'14',agency:'iProspect',group:'dentsu',color:'#E2F0D9',ink:'#3F6F2D',total:8,years:[3,1,4],won:['Pizza Hut / PHD','Jolibee','KFC'],lost:['Foot Locker departure','HK Market departure','Tiger Brokers departure','HK Financial Services Development departure','Kai Tak Sports Park departure']}
+];
+const esc=value=>String(value).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+const chip=(name,loss=false)=>`<span class="pitch-chip ${loss?'loss':/\\bret(ention)?\\b/i.test(name)?'ret':''}">${esc(name)}</span>`;
+document.getElementById('pitchRanking').innerHTML=PITCH_DATA.map(item=>`
+<tr class="${item.active?'active':''}" data-target="${esc(item.id)}">
+  <td>${esc(item.rank)}</td>
+  <td><span class="agency-cell"><span class="dot" style="background:${esc(item.color)}"></span><span>${esc(item.agency)}<span class="group">${esc(item.group)}</span></span></span></td>
+  <td class="num" style="color:${esc(item.ink)}">${esc(item.total)}</td>
+  <td class="year-cell">${item.years[0]}</td>
+  <td class="year-cell">${item.years[1]}</td>
+  <td class="year-cell">${item.years[2]}</td>
+  <td class="chev">›</td>
+</tr>`).join('');
+document.getElementById('pitchDetails').innerHTML=PITCH_DATA.map(item=>`
+<div class="detail ${item.active?'active':''}" id="${esc(item.id)}">
+  <div class="detail-hero">
+    <div class="detail-title"><span class="dot big" style="background:${esc(item.color)}"></span><div><h3 style="color:${esc(item.ink)}">${esc(item.agency)}</h3><small>${esc(item.group)}</small></div></div>
+    <div class="detail-count"><b style="color:${esc(item.ink)}">${item.total}</b><span>Participations</span></div>
+  </div>
+  <div class="year-strip">
+    <div class="year-box"><span>2023</span><b>${item.years[0]}</b></div>
+    <div class="year-box"><span>2024</span><b>${item.years[1]}</b></div>
+    <div class="year-box"><span>2025</span><b>${item.years[2]}</b></div>
+  </div>
+  <div class="detail-body">
+    <section class="pitch-section"><h4>Pitches won</h4><div class="pitch-list">${item.won.map(name=>chip(name,false)).join('')}</div></section>
+    <section class="pitch-section"><h4>Unsuccessful participations</h4><div class="pitch-list">${item.lost.map(name=>chip(name,true)).join('')}</div></section>
+  </div>
+</div>`).join('') + '<div class="empty">No agency selected. Click one or more rows to display details.</div>';
+(function(){
+  const layout=document.querySelector('.report-interactive');
+  const rows=[...layout.querySelectorAll('tbody tr[data-target]')];
+  const details=[...layout.querySelectorAll('.detail[id]')];
+  const empty=layout.querySelector('.empty');
+  function sync(){
+    const active=rows.filter(r=>r.classList.contains('active')).map(r=>r.dataset.target);
+    details.forEach(d=>d.classList.toggle('active',active.includes(d.id)));
+    if(empty)empty.classList.toggle('active',active.length===0);
+  }
+  rows.forEach(row=>row.addEventListener('click',()=>{row.classList.toggle('active');sync();}));
+  sync();
+}());
+</script>
+</body>
+</html>
